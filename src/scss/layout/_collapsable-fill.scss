@@ -5,3 +5,10 @@ input {
   -moz-appearance: none;
   appearance: none;
 }
+
+//estilos de la parte formulario
+.form {
+  font-family: $openSans;
+  font-size: 14px;
+  background-color: aqua;
+}

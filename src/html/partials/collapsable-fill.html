@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Colapsable Rellenar</title>
     <!-- necesito añadir googlefonts and fontawesome -->
+    <link rel="stylesheet" href="" />
   </head>
   <body>
     <!-- method=post por info sensible vs get -->
@@ -16,9 +17,10 @@
         icon title
       </fieldset>
 
-      <fieldset>
-        <form action="/signup" method="post">
-          <!-- por defecto, los navegadores organizan campos en línea (display: inline-block) podemos asignarles display:block en CSS para columna -->
+      <form action="/signup" method="post" class="form">
+        <!-- por defecto, los navegadores organizan campos en línea (display: inline-block) podemos asignarles display:block en CSS para columna -->
+
+        <fieldset>
           <div>
             <label for="fullName">Nombre completo</label>
             <input
@@ -37,54 +39,55 @@
               name="position"
             />
           </div>
-        </form>
-      </fieldset>
+        </fieldset>
 
-      <fieldset>
-        <label for="">Imagen de perfil</label>
-        <button></button>
-        checkbox
-      </fieldset>
-      <fieldset>
-        <div>
-          <label for="email">Email</label>
-          <input
-            placeholder="Ej: sally-hill@gmail.com"
-            id="email"
-            type="email"
-            name="email"
-          />
-        </div>
-        <div>
-          <label for="telephone">Teléfono</label>
-          <input
-            placeholder="Ej: 555-55-55-55"
-            id="telephone"
-            type="tel"
-            name="phone"
-          />
-        </div>
-        <div>
-          <label for="linkedinName">Linkedin</label>
-          <input
-            placeholder="Ej: linkedin.com/in/sally.hill"
-            id="linkedinName"
-            type="text"
-            name="linkedinName"
-          />
-        </div>
-        <!-- se consideraría type text para un texto que empieza con arroba¿? -->
-        <div>
-          <label for="gitHubName">Github</label>
-          <input
-            placeholder="Ej: @sally-hill"
-            id="gitHubName"
-            type="text"
-            name="gitHubName"
-          />
-          <!-- no hay input type=sumbit value= enviar info porque la información se va mostrando en el momento en la tarjeta y no se manda a ningún lugar -->
-        </div>
-      </fieldset>
+        <fieldset>
+          <label for="">Imagen de perfil</label>
+          <button></button>
+          checkbox
+        </fieldset>
+
+        <fieldset>
+          <div>
+            <label for="email">Email</label>
+            <input
+              placeholder="Ej: sally-hill@gmail.com"
+              id="email"
+              type="email"
+              name="email"
+            />
+          </div>
+          <div>
+            <label for="telephone">Teléfono</label>
+            <input
+              placeholder="Ej: 555-55-55-55"
+              id="telephone"
+              type="tel"
+              name="phone"
+            />
+          </div>
+          <div>
+            <label for="linkedinName">Linkedin</label>
+            <input
+              placeholder="Ej: linkedin.com/in/sally.hill"
+              id="linkedinName"
+              type="text"
+              name="linkedinName"
+            />
+          </div>
+          <!-- se consideraría type text para un texto que empieza con arroba¿? -->
+          <div>
+            <label for="gitHubName">Github</label>
+            <input
+              placeholder="Ej: @sally-hill"
+              id="gitHubName"
+              type="text"
+              name="gitHubName"
+            />
+            <!-- no hay input type=sumbit value= enviar info porque la información se va mostrando en el momento en la tarjeta y no se manda a ningún lugar -->
+          </div>
+        </fieldset>
+      </form>
       <fieldset>comparte</fieldset>
     </main>
   </body>
