@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colapsable Rellenar</title>
+    <!-- necesito añadir googlefonts and fontawesome?  -->
+  </head>
+  <body>
+    <!-- empleamos method = post por ser información sensible vs get -->
+    <!-- empleamos action para la dirección del servidor dde se envían los datos. puente entre back end y front end -->
+    <main>
+      <fieldset>
+        <!-- comparar con alexandra y cris qué etiquetas semánticas han elegido y hacerlo igual -->
+        icon title
+      </fieldset>
+
+      <fieldset>
+        <form action="/signup" method="post">
+          <!-- por defecto, los navegadores organizan campos en línea (display: inline-block) podemos asignarles display:block en CSS para columna -->
+          <div>
+            <label for="fullName">Nombre completo</label>
+            <input
+              placeholder="Ej: Sally Jill"
+              id="fullName"
+              type="text"
+              name="fullName"
+            />
+          </div>
+          <div>
+            <label for="position">Puesto</label>
+            <input
+              placeholder="Ej: Front-end unicorn"
+              id="position"
+              type="text"
+              name="position"
+            />
+          </div>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <label for="">Imagen de perfil</label>
+        <button></button>
+        checkbox
+      </fieldset>
+      <fieldset>
+        <div>
+          <label for="email">Email</label>
+          <input
+            placeholder="Ej: sally-hill@gmail.com"
+            id="email"
+            type="email"
+            name="email"
+          />
+        </div>
+        <div>
+          <label for="telephone">Teléfono</label>
+          <input
+            placeholder="Ej: 555-55-55-55"
+            id="telephone"
+            type="tel"
+            name="phone"
+          />
+        </div>
+        <div>
+          <label for="linkedinName">Linkedin</label>
+          <input
+            placeholder="Ej: linkedin.com/in/sally.hill"
+            id="linkedinName"
+            type="text"
+            name="linkedinName"
+          />
+        </div>
+        <!-- se consideraría type text para un texto que empieza con arroba¿? -->
+        <div>
+          <label for="gitHubName">Github</label>
+          <input
+            placeholder="Ej: @sally-hill"
+            id="gitHubName"
+            type="text"
+            name="gitHubName"
+          />
+          <!-- no hay input type=sumbit value= enviar info porque la información se va mostrando en el momento en la tarjeta y no se manda a ningún lugar -->
+        </div>
+      </fieldset>
+    </main>
+  </body>
+</html>
