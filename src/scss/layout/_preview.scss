@@ -3,13 +3,17 @@
   height: 457px;
   width: 320px;
   margin: auto;
+  line-height: 20px;
   &__button {
-    border: #ffffff 1px solid;
+    border: $textColor8 1px solid;
     border-radius: 15px;
+    font-family: $openSans;
+    font-size: 12px;
+    padding: 6px 6px 6px 0px;
     background-color: #bfcdd0;
     color: $textColorGrey;
     text-transform: uppercase;
-    margin: 38px 200px 0px 45px;
+    margin: 38px 200px 20px 45px;
     width: 75px;
     height: 30px;
   }
@@ -17,7 +21,33 @@
     width: 240px;
     height: 329px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: $textColor8;
     color: $textColor1;
   }
+  &__name {
+    font-family: $montserrat;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  &__description {
+    font-family: $montserrat;
+    font-size: 16px;
+  }
+  &__image {
+    width: 240px;
+    height: 240px;
+  }
+  &__icons {
+    margin-left: 20px;
+    margin-right: 65px;
+  }
+  &__icons--measures {
+    border: $textColorHospitalGreen solid 2px;
+    border-radius: 16px;
+    color: $textColorDarkGreen;
+    padding: 7px;
+  }
+}
+.fa-trash-alt {
+  padding: 3px;
 }
