@@ -1,0 +1,23 @@
+.fa-share-alt {
+  color: $textColor2;
+}
+.share {
+  color: $textColor1;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: $openSans;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__buttom {
+    background-color: $textColor2;
+    width: 199px;
+    height: 50px;
+    border-radius: 12px;
+    color: $textColor8;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.32);
+  }
+}
