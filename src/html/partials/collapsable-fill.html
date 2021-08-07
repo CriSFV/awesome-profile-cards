@@ -1,13 +1,11 @@
 <form action="/signup" method="post" class="fill">
   <!-- por defecto, los navegadores organizan campos en línea (display: inline-block) podemos asignarles display:block en CSS para columna -->
 
-  <fieldset class="main__form--first">
+  <fieldset class="fill__first">
     <div>
-      <label for="fullName" class="main__form--first-label1"
-        >Nombre completo</label
-      >
+      <label for="fullName" class="fill__first-label1">Nombre completo</label>
       <input
-        class="main__form--first-input1"
+        class="fill__first-input1"
         placeholder="Ej: Sally Jill"
         id="fullName"
         type="text"
@@ -15,9 +13,9 @@
       />
     </div>
     <div>
-      <label for="position" class="main__form--first-label2">Puesto</label>
+      <label for="position" class="fill__first-label2">Puesto</label>
       <input
-        class="main__form--first-input2"
+        class="fill__first-input2"
         placeholder="Ej: Front-end unicorn"
         id="position"
         type="text"
@@ -26,17 +24,17 @@
     </div>
   </fieldset>
 
-  <fieldset class="main__form--second">
-    <label for="" class="main__form--second-label">Imagen de perfil</label>
-    <button class="main__form--second-button"></button>
+  <fieldset class="fill__second">
+    <label for="" class="fill__second-label">Imagen de perfil</label>
+    <button class="fill__second-button"></button>
     checkbox
   </fieldset>
 
-  <fieldset class="main__form--third">
+  <fieldset class="fill__third">
     <div>
-      <label for="email" class="main__form--third-mailLab">Email</label>
+      <label for="email" class="fill__third-mailLab">Email</label>
       <input
-        class="main__form--third-mailInp"
+        class="fill__third-mailInp"
         placeholder="Ej: sally-hill@gmail.com"
         id="email"
         type="email"
@@ -44,9 +42,9 @@
       />
     </div>
     <div>
-      <label for="telephone" class="main__form--third-telLab">Teléfono</label>
+      <label for="telephone" class="fill__third-telLab">Teléfono</label>
       <input
-        class="main__form--third-telInp"
+        class="fill__third-telInp"
         placeholder="Ej: 555-55-55-55"
         id="telephone"
         type="tel"
@@ -54,11 +52,9 @@
       />
     </div>
     <div>
-      <label for="linkedinName" class="main__form--third-linkedLab"
-        >Linkedin</label
-      >
+      <label for="linkedinName" class="fill__third-linkedLab">Linkedin</label>
       <input
-        class="main__form--third-linkedInp"
+        class="fill__third-linkedInp"
         placeholder="Ej: linkedin.com/in/sally.hill"
         id="linkedinName"
         type="text"
@@ -67,9 +63,9 @@
     </div>
     <!-- se consideraría type text para un texto que empieza con arroba¿? -->
     <div>
-      <label for="gitHubName" class="main__form--third-gitLab">Github</label>
+      <label for="gitHubName" class="fill__third-gitLab">Github</label>
       <input
-        class="main__form--third-gitInp"
+        class="fill__third-gitInp"
         placeholder="Ej: @sally-hill"
         id="gitHubName"
         type="text"
