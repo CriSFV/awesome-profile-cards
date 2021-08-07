@@ -1,21 +1,23 @@
 <form action="/signup" method="post" class="fill">
   <!-- por defecto, los navegadores organizan campos en línea (display: inline-block) podemos asignarles display:block en CSS para columna -->
 
-  <fieldset class="fill__first">
-    <div>
-      <label for="fullName" class="fill__first-label1">Nombre completo</label>
+  <fieldset class="fill">
+    <div class="fill__first--name">
+      <label for="fullName" class="fill__first--name-lab"
+        >Nombre completo</label
+      >
       <input
-        class="fill__first-input1"
+        class="fill__first--name-inp"
         placeholder="Ej: Sally Jill"
         id="fullName"
         type="text"
         name="fullName"
       />
     </div>
-    <div>
-      <label for="position" class="fill__first-label2">Puesto</label>
+    <div class="fill__first--position">
+      <label for="position" class="fill__first--position-lab">Puesto</label>
       <input
-        class="fill__first-input2"
+        class="fill__first--position-inp"
         placeholder="Ej: Front-end unicorn"
         id="position"
         type="text"
@@ -31,30 +33,30 @@
   </fieldset>
 
   <fieldset class="fill__third">
-    <div>
-      <label for="email" class="fill__third-mailLab">Email</label>
+    <div class="fill__third--mail">
+      <label for="email" class="fill__third--mail-lab">Email</label>
       <input
-        class="fill__third-mailInp"
+        class="fill__third--mail-inp"
         placeholder="Ej: sally-hill@gmail.com"
         id="email"
         type="email"
         name="email"
       />
     </div>
-    <div>
-      <label for="telephone" class="fill__third-telLab">Teléfono</label>
+    <div class="fill__third--tel">
+      <label for="telephone" class="fill__third--tel-lab">Teléfono</label>
       <input
-        class="fill__third-telInp"
+        class="fill__third--tel-inp"
         placeholder="Ej: 555-55-55-55"
         id="telephone"
         type="tel"
         name="phone"
       />
     </div>
-    <div>
-      <label for="linkedinName" class="fill__third-linkedLab">Linkedin</label>
+    <div class="fill__third--linked">
+      <label for="linkedinName" class="fill__third--linked-lab">Linkedin</label>
       <input
-        class="fill__third-linkedInp"
+        class="fill__third--linked-inp"
         placeholder="Ej: linkedin.com/in/sally.hill"
         id="linkedinName"
         type="text"
@@ -62,10 +64,10 @@
       />
     </div>
     <!-- se consideraría type text para un texto que empieza con arroba¿? -->
-    <div>
-      <label for="gitHubName" class="fill__third-gitLab">Github</label>
+    <div class="fill__third--git">
+      <label for="gitHubName" class="fill__third--git-lab">Github</label>
       <input
-        class="fill__third-gitInp"
+        class="fill__third--git-inp"
         placeholder="Ej: @sally-hill"
         id="gitHubName"
         type="text"

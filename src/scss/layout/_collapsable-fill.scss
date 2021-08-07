@@ -1,9 +1,104 @@
 .fill {
   font-family: $openSans;
   font-size: 14px;
-  background-color: aqua;
+  background-image: linear-gradient(to bottom, $textColor6, $textColor8 9%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 19px;
+  padding: 27px 19px 30px 20px;
+
+  &__first--name {
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    width: 100%;
+    color: $textColor4;
+    &-lab {
+      line-height: 20px;
+      margin-bottom: 7px;
+    }
+    &-inp {
+      border: solid 1px $textColor5;
+      padding: 3px 205px 7px 9px;
+    }
+  }
+  &__first--position {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $textColor4;
+    line-height: 20px;
+    &-lab {
+      line-height: 20px;
+      margin-bottom: 7px;
+    }
+    &-inp {
+      border: solid 1px $textColor5;
+      padding: 3px 135px 7px 9px;
+    }
+  }
+  &__third--mail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $textColor4;
+    line-height: 20px;
+    &-lab {
+      line-height: 20px;
+      margin-bottom: 7px;
+    }
+    &-inp {
+      border: solid 1px $textColor5;
+      padding: 3px 120px 7px 9px;
+    }
+  }
+  &__third--tel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $textColor4;
+    line-height: 20px;
+    &-lab {
+      line-height: 20px;
+      margin-bottom: 7px;
+    }
+    &-inp {
+      border: solid 1px $textColor5;
+      padding: 3px 167px 7px 9px;
+    }
+  }
+  &__third--linked {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $textColor4;
+    line-height: 20px;
+    &-lab {
+      line-height: 20px;
+      margin-bottom: 7px;
+    }
+    &-inp {
+      border: solid 1px $textColor5;
+      padding: 3px 96px 7px 9px;
+    }
+  }
+  &__third--git {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $textColor4;
+    line-height: 20px;
+    &-lab {
+      line-height: 20px;
+      margin-bottom: 7px;
+    }
+    &-inp {
+      border: solid 1px $textColor5;
+      padding: 3px 188px 7px 9px;
+    }
+  }
 }
