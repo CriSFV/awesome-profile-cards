@@ -1,0 +1,23 @@
+.preview {
+  background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  height: 457px;
+  width: 320px;
+  margin: auto;
+  &__button {
+    border: #ffffff 1px solid;
+    border-radius: 15px;
+    background-color: #bfcdd0;
+    color: $textColorGrey;
+    text-transform: uppercase;
+    margin: 38px 200px 0px 45px;
+    width: 75px;
+    height: 30px;
+  }
+  &__card {
+    width: 240px;
+    height: 329px;
+    margin: auto;
+    background-color: #ffffff;
+    color: $textColor1;
+  }
+}
