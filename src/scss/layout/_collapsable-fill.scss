@@ -7,9 +7,9 @@
   justify-content: center;
   align-items: center;
   // flex-wrap: wrap;
-  margin-left: 20px;
-  margin-right: 19px;
+  margin: auto;
   padding: 27px 19px 30px 20px;
+  width: 100%;
 
   &__first--name {
     display: flex;
@@ -39,6 +39,24 @@
     &-inp {
       border: solid 1px $textColor5;
       padding: 3px 135px 7px 9px;
+    }
+  }
+  &__second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    &-label {
+      line-height: 20px;
+      margin-bottom: 7px;
+      color: $textColor4;
+    }
+    &-button {
+      background-color: $textColor2;
+      width: 140px;
+      height: 30px;
+      border: solid 1px $textColor2;
+      color: $textColor8;
     }
   }
   &__third--mail {
