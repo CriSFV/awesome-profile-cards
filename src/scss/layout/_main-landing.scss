@@ -1,7 +1,64 @@
 .main__container {
-  background-color: darkorange;
+  background-color: $textColor6;
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.main__section1 {
+  margin-top: 35.4px;
+  margin-bottom: 17.8px;
+  text-align: center;
+  @media all and(min-width: 768px) {
+    margin-top: 31px;
+    margin-bottom: 27px;
+  }
+  .main__section1--title {
+    height: 24px;
+    font-size: 19.2px;
+    font-weight: 900;
+    font-family: $merriWeather;
+    color: $textColor2;
+    @media all and(min-width:768px) {
+      height: 31px;
+      font-size: 24px;
+    }
+  }
+  .main__section1--paragraph {
+    height: 38.4px;
+    font-size: 12.8px;
+    font-family: $openSans;
+    color: $textColor4;
+    width: 20em;
+    @media all and(min-width:768px) {
+      height: 48px;
+      font-size: 16px;
+    }
+  }
+}
+.main__section2 {
+  background-color: darkseagreen;
+  width: 100%;
+  height: 73.8px;
+  box-sizing: border-box;
+  margin-bottom: 38.6px;
+  .main__section2--options {
+    list-style-type: none;
+    color: $textColorGrey;
+    font-family: $openSans;
+    font-size: 12.8px;
+    height: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .far {
+    color: $textColor2;
+  }
+}
+.main__section3 {
+  a {
+    text-decoration: none;
+  }
 }
