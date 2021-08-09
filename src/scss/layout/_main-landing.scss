@@ -40,7 +40,8 @@
   }
 }
 .main__section2 {
-  background-color: darkseagreen;
+  border: solid 1.6px $textColor2;
+  opacity: 21%;
   width: 268px;
   height: 73.8px;
   box-sizing: border-box;
@@ -49,7 +50,8 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  .main__section2--options {
+
+  /*.main__section2--options {
     list-style-type: none;
     color: $textColorGrey;
     font-family: $openSans;
@@ -67,7 +69,7 @@
   }
   .far {
     color: $textColor2;
-  }
+  }*/
 }
 .main__section3 {
   margin-bottom: 30px;
