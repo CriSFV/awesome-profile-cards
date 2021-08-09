@@ -5,6 +5,12 @@
   font-family: $openSans;
 }
 
+.flexboxdesign {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
 .titlecolours {
   font-size: 14px;
   color: #54585a;
@@ -12,9 +18,16 @@
   font-family: $openSans;
 }
 
-.colourboxes {
+li {
   width: 30px;
   height: 25px;
+  font-size: 0px;
+}
+// .colorboxesmaster {
+//   width: 90px;
+//   height: 75px;
+// }
+.colourboxes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -23,35 +36,44 @@
 
 .item1-item1 {
   background-color: #114e4e;
+  color: #114e4e;
+  list-style-type: none;
 }
 .item1-item2 {
   background-color: #438792;
+  color: #438792;
 }
 
 .item1-item3 {
   background-color: #a2deaf;
+  color: #a2deaf;
 }
 
 .item2-item1 {
   background-color: #420101;
+  color: #420101;
 }
 
 .item2-item2 {
   background-color: #bd1010;
+  color: #bd1010;
 }
 
 .item2-item3 {
   background-color: #e95626;
+  color: #e95626;
 }
 
 .item3-item1 {
   background-color: #3e5b65;
+  color: #3e5b65;
 }
 
 .item3-item2 {
   background-color: #eab052;
+  color: #eab052;
 }
-
 .item3-item3 {
   background-color: #a0c0cf;
+  color: #a0c0cf;
 }
