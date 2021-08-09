@@ -6,7 +6,7 @@
   line-height: 20px;
   &__button {
     border: $textColor8 1px solid;
-    border-radius: 15px;
+    border-radius: 50%;
     font-family: $openSans;
     font-size: 12px;
     padding: 6px 6px 6px 0px;
@@ -42,10 +42,16 @@
     margin-right: 65px;
   }
   &__icons--measures {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     border: $textColorHospitalGreen solid 2px;
-    border-radius: 16px;
+    border-radius: 50%;
     color: $textColorDarkGreen;
     padding: 7px;
+    width: 32px;
+    height: 32px;
   }
 }
 .fa-trash-alt {
