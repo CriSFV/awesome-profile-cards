@@ -6,16 +6,16 @@
 }
 .share {
   color: $textColor1;
-
   font-size: 18px;
   font-family: $openSans;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   &__title {
     text-transform: uppercase;
-    margin-top: 10px;
+    padding-top: 10px;
   }
   &__buttom {
     background-color: $textColor2;
