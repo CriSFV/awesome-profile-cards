@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: solid 1px $textColor9;
   @media all and(min-width:768px) {
     flex-direction: row;
     justify-content: space-between;
