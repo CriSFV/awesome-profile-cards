@@ -28,12 +28,15 @@
 //   height: 75px;
 // }
 .colourboxes {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 0px;
+  line-height: 30px;
 }
-
+/*.design__input {
+  line-height: 30px;
+}*/
 .item1-item1 {
   background-color: #114e4e;
   color: #114e4e;
@@ -76,4 +79,7 @@
 .item3-item3 {
   background-color: #a0c0cf;
   color: #a0c0cf;
+}
+.label__design {
+  display: block;
 }
