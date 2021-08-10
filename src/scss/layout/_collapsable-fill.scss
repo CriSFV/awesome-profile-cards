@@ -24,8 +24,20 @@
 
       &-keyboardIcon {
         color: $textColor2;
-        font-size: 22px;
-        transform: translate(-25px, 10px);
+        font-size: 18px;
+        transform: translate(-18px, 9px);
+      }
+      &-title {
+        color: $textColor1;
+        text-transform: uppercase;
+        font-family: $openSans;
+        font-weight: 600;
+        size: 18px;
+      }
+      &-chevronIconDown {
+        font-size: 18px;
+        color: $textColor1;
+        transform: translate(10px, 15px);
       }
     }
   }
@@ -39,6 +51,7 @@
     &-lab {
       line-height: 20px;
       margin-bottom: 7px;
+      margin-top: 25px;
     }
     &-inp {
       border: solid 1px $textColor5;
@@ -54,6 +67,7 @@
     &-lab {
       line-height: 20px;
       margin-bottom: 7px;
+      margin-top: 20px;
     }
     &-inp {
       border: solid 1px $textColor5;
@@ -70,6 +84,7 @@
       line-height: 20px;
       margin-bottom: 7px;
       color: $textColor4;
+      margin-top: 18px;
     }
     &-buttoncheck {
       display: flex;
@@ -94,6 +109,7 @@
     &-lab {
       line-height: 20px;
       margin-bottom: 7px;
+      margin-top: 20px;
     }
     &-inp {
       border: solid 1px $textColor5;
@@ -109,6 +125,7 @@
     &-lab {
       line-height: 20px;
       margin-bottom: 7px;
+      margin-top: 20px;
     }
     &-inp {
       border: solid 1px $textColor5;
@@ -124,6 +141,7 @@
     &-lab {
       line-height: 20px;
       margin-bottom: 7px;
+      margin-top: 20px;
     }
     &-inp {
       border: solid 1px $textColor5;
@@ -139,6 +157,7 @@
     &-lab {
       line-height: 20px;
       margin-bottom: 7px;
+      margin-top: 20px;
     }
     &-inp {
       border: solid 1px $textColor5;
