@@ -40,7 +40,9 @@
   }
 }
 .main__section2 {
-  border: 1.6px solid $textColor2;
+  border: 1.6px solid $textColor10;
+  border-radius: 4px;
+  border-color: $textColor10;
   width: 268px;
   height: 73.8px;
   box-sizing: border-box;
