@@ -1,5 +1,11 @@
 .fa-share-alt {
   color: $textColor2;
+  padding-top: 13px;
+  margin-left: 23px;
+}
+.fa-chevron-up {
+  margin-top: 13px;
+  margin-left: 137px;
 }
 .fa-twitter {
   padding: 3px;
@@ -8,17 +14,21 @@
   color: $textColor1;
   font-size: 18px;
   font-family: $openSans;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  border-top: 1px solid $textColor9;
+  margin: 0px 20px 0px 20px;
+  &__first {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
   &__title {
     text-transform: uppercase;
-    padding-top: 10px;
-    border-top: 1px solid $textColor9;
-    width: 285px;
-    text-align: center;
+    padding: 27px 20px 10px 10px;
+  }
+  &__second {
+    display: flex;
+    justify-content: center;
   }
   &__buttom {
     background-color: $textColor2;
@@ -39,7 +49,7 @@
     border-top: 1px solid $textColor9;
     border-bottom: 1px solid $textColor9;
     margin-bottom: 30px;
-    width: 285px;
+
     &__title {
       font-size: 18px;
       text-transform: none;
