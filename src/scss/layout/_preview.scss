@@ -4,6 +4,10 @@
   width: 320px;
   margin: auto;
   line-height: 20px;
+  @media (min-width: 768px) {
+    width: 329px;
+    height: 812px;
+  }
   &__button {
     border: $textColor8 1px solid;
     border-radius: 15px;
@@ -16,11 +20,15 @@
     margin: 38px 200px 20px 45px;
     width: 75px;
     height: 30px;
+    @media (min-width: 768px) {
+      margin-top: 173px;
+    }
   }
   &__card {
     width: 240px;
     height: 329px;
     margin: auto;
+    border-radius: 2px;
     background-color: $textColor8;
     color: $textColor1;
   }
@@ -46,11 +54,10 @@
   }
   &__icons--measures {
     display: inline-block;
-
     border: $textColorHospitalGreen solid 2px;
     border-radius: 50%;
     color: $textColorDarkGreen;
-
+    margin: 1px;
     width: 32px;
     height: 32px;
     line-height: 32px;
