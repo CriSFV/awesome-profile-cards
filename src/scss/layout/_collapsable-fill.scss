@@ -22,7 +22,7 @@
       &-keyboardIcon {
         color: $textColor2;
         font-size: 20px;
-        transform: translate(-31px, 5px);
+        transform: translate(45px, 5px);
       }
       &-title {
         color: $textColor1;
@@ -30,11 +30,12 @@
         font-family: $openSans;
         font-weight: 600;
         font-size: 18px;
+        transform: translate(55px);
       }
       &-chevronIconUp {
         font-size: 18px;
         color: $textColor1;
-        transform: translate(15px);
+        transform: translate(-50px, -10px);
       }
     }
   }
