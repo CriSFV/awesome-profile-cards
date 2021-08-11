@@ -6,7 +6,7 @@
   line-height: 20px;
   &__button {
     border: $textColor8 1px solid;
-    border-radius: 50%;
+    border-radius: 15px;
     font-family: $openSans;
     font-size: 12px;
     padding: 6px 6px 6px 0px;
@@ -28,32 +28,40 @@
     font-family: $montserrat;
     font-weight: bold;
     font-size: 18px;
+    padding: 21px 14px 2px 20px;
   }
   &__description {
     font-family: $montserrat;
     font-size: 16px;
+    padding: 2px 52px 10px 20px;
   }
   &__image {
     width: 240px;
-    height: 240px;
+    height: 200px;
   }
   &__icons {
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 65px;
   }
   &__icons--measures {
     display: inline-block;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+
     border: $textColorHospitalGreen solid 2px;
     border-radius: 50%;
     color: $textColorDarkGreen;
-    padding: 7px;
+
     width: 32px;
     height: 32px;
+    line-height: 32px;
+    text-align: center;
   }
 }
 .fa-trash-alt {
   padding: 3px;
+}
+.preview__pretty {
+  width: 5px;
+  height: 42px;
+  background-color: #438792;
 }

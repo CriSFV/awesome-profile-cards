@@ -1,31 +1,29 @@
 .fill {
   font-family: $openSans;
-  font-size: 14px;
   background-image: linear-gradient(to bottom, $textColor6, $textColor8 9%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // flex-wrap: wrap;
-  margin: auto;
   padding: 27px 19px 30px 20px;
   width: 100%;
 
   &__legend {
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: space-between;
+    align-items: center;
 
     &--subcontainer {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: center;
       margin-right: 168px;
 
       &-keyboardIcon {
         color: $textColor2;
-        font-size: 18px;
-        transform: translate(-18px, 9px);
+        font-size: 20px;
+        transform: translate(-31px, 5px);
       }
       &-title {
         color: $textColor1;
@@ -34,10 +32,10 @@
         font-weight: 600;
         size: 18px;
       }
-      &-chevronIconDown {
+      &-chevronIconUp {
         font-size: 18px;
         color: $textColor1;
-        transform: translate(10px, 15px);
+        transform: translate(15px);
       }
     }
   }
@@ -45,17 +43,18 @@
   &__first--name {
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap;
     width: 100%;
     color: $textColor4;
+
     &-lab {
       line-height: 20px;
       margin-bottom: 7px;
       margin-top: 25px;
+      font-size: 14px;
     }
     &-inp {
       border: solid 1px $textColor5;
-      padding: 3px 205px 7px 9px;
+      padding: 3px 190px 7px 9px;
     }
   }
   &__first--position {
@@ -68,28 +67,31 @@
       line-height: 20px;
       margin-bottom: 7px;
       margin-top: 20px;
+      font-size: 14px;
     }
     &-inp {
       border: solid 1px $textColor5;
       padding: 3px 135px 7px 9px;
     }
   }
+
   &__second {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
 
     &-label {
       line-height: 20px;
       margin-bottom: 7px;
       color: $textColor4;
       margin-top: 18px;
+      font-size: 14px;
     }
     &-buttoncheck {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
+      margin-top: 10px;
     }
     &-button {
       background-color: $textColor2;
@@ -98,6 +100,12 @@
       border: solid 1px $textColor2;
       border-radius: 3px;
       color: $textColor8;
+      margin-right: 20px;
+    }
+    &-checkbox {
+      border: solid 1px $textColor5;
+      width: 30px;
+      height: 30px;
     }
   }
   &__third--mail {
@@ -110,6 +118,7 @@
       line-height: 20px;
       margin-bottom: 7px;
       margin-top: 20px;
+      font-size: 14px;
     }
     &-inp {
       border: solid 1px $textColor5;
@@ -126,6 +135,7 @@
       line-height: 20px;
       margin-bottom: 7px;
       margin-top: 20px;
+      font-size: 14px;
     }
     &-inp {
       border: solid 1px $textColor5;
@@ -142,6 +152,7 @@
       line-height: 20px;
       margin-bottom: 7px;
       margin-top: 20px;
+      font-size: 14px;
     }
     &-inp {
       border: solid 1px $textColor5;
@@ -158,6 +169,7 @@
       line-height: 20px;
       margin-bottom: 7px;
       margin-top: 20px;
+      font-size: 14px;
     }
     &-inp {
       border: solid 1px $textColor5;
