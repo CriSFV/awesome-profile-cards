@@ -11,6 +11,8 @@
   @media (min-width: 768px) {
     width: 329px;
     height: 812px;
+    border-radius: 6px;
+    margin: 23px 40px;
   }
   &__button {
     border: $textColor8 1px solid;
@@ -26,6 +28,7 @@
     height: 30px;
     @media (min-width: 768px) {
       margin-top: 173px;
+      transform: translateY(116px);
     }
   }
   &__card {
