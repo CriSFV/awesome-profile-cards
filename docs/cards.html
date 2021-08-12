@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Cards</title>
+  </head>
+
+  <body>
+    <header class="header__cards--container">
+      <img
+        class="header__cards--img"
+        src="./assets/images/logo-awesome-profile-cards.svg"
+        alt="logo-awesome-profile-cards"
+      />
+    </header>
+
+    <main class="wholeMain">
+      <section class="preview">
+          <button class="preview__button"><i class="fas fa-trash-alt"></i>reset</button>
+          <article class="preview__card">
+            <div >
+              <span class="preview__pretty"></span>
+              <h2 class="preview__name">Nombre Apellidos</h2>
+              <h3 class="preview__description">Descripcion</h3>
+            </div>
+            <div ><img class= "preview__image" src="./assets/images/tarjetaSonrisa.jpg" alt="image"></img> </div>
+              <nav class="preview__icons">
+                <a class="preview__icons--measures" href="#" target="_blank" title="phone"><i class="fas fa-mobile-alt"></i></a>
+                <a class="preview__icons--measures" href="#" target="_blank" title="message"><i class="far fa-envelope"></i></a> 
+                <a class="preview__icons--measures" href="#" target="_blank" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a class="preview__icons--measures" href="#" target="_blank" title="github"><i class="fab fa-github-alt"></i></a>
+              </nav>
+          
+          </article>
+
+        </section>
+      <form action="/signup" method="post" class="form">
+        <div class="collapsable">
+  <i class="far fa-object-ungroup cloningicon collapsable__iconStart"></i>
+  <h3 class="collapsable__title">Diseña</h3>
+  <i class="fas fa-chevron-up collapsable__iconEnd"></i>
+</div>
+
+        <section class="wholecollapsable-design">
+          <!-- <div class="titledesignflex">
+            <i class="far fa-object-ungroup cloningicon"></i>
+            <h3 class="titledesign">diseña</h3>
+            <i class="fas fa-chevron-up arrowdesign"></i>
+          </div> -->
+
+          <div class="rectangle-2"></div>
+          <fieldset class="flexboxdesign">
+            <h4 class="titlecolours">colores</h4>
+            <div class="colourboxesmaster">
+              <label class="label__design" for="colour1">
+                <input
+                  id="colour1"
+                  class="design__input"
+                  type="radio"
+                  value="colours1"
+                  name="coloursgrid"
+                />
+                <ul class="colourboxes colourone">
+                  <li class="item1-item1 li">Color A</li>
+                  <li class="item1-item2 li">Color B</li>
+                  <li class="item1-item3 li">Color C</li>
+                </ul>
+              </label>
+              <label class="label__design" for="colour2">
+                <input
+                  id="colour2"
+                  class="design__input"
+                  type="radio"
+                  value="colours2"
+                  name="coloursgrid"
+                />
+                <ul class="colourboxes colourtwo">
+                  <li class="item2-item1 li">Color A</li>
+                  <li class="item2-item2 li">Color B</li>
+                  <li class="item2-item3 li">Color C</li>
+                </ul>
+              </label>
+
+              <label class="label__design" for="colour3">
+                <input
+                  id="colour3"
+                  class="design__input"
+                  type="radio"
+                  value="colours3"
+                  name="coloursgrid"
+                />
+                <ul class="colourboxes colourthree">
+                  <li class="item3-item2 li">Color B</li>
+                  <li class="item3-item1 li">Color A</li>
+                  <li class="item3-item3 li">Color C</li>
+                </ul>
+              </label>
+            </div>
+          </fieldset>
+        </section>
+
+        <div class="topBorder"></div>
+        <div class="collapsable">
+          <i class="far fa-keyboard collapsable__iconStart"></i>
+          <h3 class="collapsable__title">Rellena</h3>
+          <i class="fas fa-chevron-up collapsable__iconEnd"></i>
+        </div>
+
+        <section class="fill">
+          <fieldset class="fill__first">
+            <div class="fill__first--name">
+              <label for="fullName" class="fill__first--name-lab"
+                >Nombre completo</label
+              >
+              <input
+                class="fill__first--name-inp"
+                placeholder="Ej: Sally Jill"
+                id="fullName"
+                type="text"
+                name="fullName"
+              />
+            </div>
+            <div class="fill__first--position">
+              <label for="position" class="fill__first--position-lab">Puesto</label>
+              <input
+                class="fill__first--position-inp"
+                placeholder="Ej: Front-end unicorn"
+                id="position"
+                type="text"
+                name="position"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="fill__second">
+            <label class="fill__second-label">Imagen de perfil</label>
+            <div class="fill__second-buttoncheck">
+              <button class="fill__second-button">Añadir imagen</button>
+              <input class="fill__second-checkbox" />
+            </div>
+          </fieldset>
+
+          <fieldset class="fill__third">
+            <div class="fill__third--mail">
+              <label for="email" class="fill__third--mail-lab">Email</label>
+              <input
+                class="fill__third--mail-inp"
+                placeholder="Ej: sally-hill@gmail.com"
+                id="email"
+                type="email"
+                name="email"
+              />
+            </div>
+            <div class="fill__third--tel">
+              <label for="telephone" class="fill__third--tel-lab">Teléfono</label>
+              <input
+                class="fill__third--tel-inp"
+                placeholder="Ej: 555-55-55-55"
+                id="telephone"
+                type="tel"
+                name="phone"
+              />
+            </div>
+            <div class="fill__third--linked">
+              <label for="linkedinName" class="fill__third--linked-lab">Linkedin</label>
+              <input
+                class="fill__third--linked-inp"
+                placeholder="Ej: linkedin.com/in/sally.hill"
+                id="linkedinName"
+                type="text"
+                name="linkedinName"
+              />
+            </div>
+            <!-- se consideraría type text para un texto que empieza con arroba¿? -->
+            <div class="fill__third--git">
+              <label for="gitHubName" class="fill__third--git-lab">Github</label>
+              <input
+                class="fill__third--git-inp"
+                placeholder="Ej: @sally-hill"
+                id="gitHubName"
+                type="text"
+                name="gitHubName"
+              />
+              <!-- no hay input type=sumbit value= enviar info porque la información se va mostrando en el momento en la tarjeta y no se manda a ningún lugar -->
+            </div>
+          </fieldset>
+        </section>
+
+        <section>
+          <div class="topBorder2">     </div>
+            <div class="collapsable">
+              <i class="fas fa-share-alt collapsable__iconStart"></i>
+              <h3 class="collapsable__title">Comparte</h3>
+              <i class="fas fa-chevron-up collapsable__iconEnd"></i>
+            </div>
+
+            <fieldset class="share">
+              <div class="share__second">
+                <button class="share__buttom">
+                  <i class="far fa-address-card"></i> Crear tarjeta
+                </button>
+              </div>
+              <div class="share__collapsable">
+                <h3 class="share__collapsable__title">La tarjeta ha sido creada</h3>
+                <span class="card__http">http:direcciontarjetagenerada</span>
+                <button class="share__collapsable__button">
+                  <i class="fab fa-twitter"></i> Compartir en twitter
+                </button>
+         
+            </fieldset>
+          </div>
+        </section>
+
+      </form>
+    </main>
+    <footer class="footer__container">
+      <p class="footer__paragraph">
+        <small>Awesome profile-cards &copy;2021</small>
+      </p>
+      <img
+        class="footer__logo"
+        src="./assets/images/logo-adalab.png"
+        alt="logo de adalab"
+      />
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
