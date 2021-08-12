@@ -1,6 +1,5 @@
 .fill {
   font-family: $openSans;
-  background-image: linear-gradient(to bottom, $textColor6, $textColor8 9%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    transform: translateY(15px);
 
     &--subcontainer {
       display: flex;
@@ -23,19 +23,20 @@
       &-keyboardIcon {
         color: $textColor2;
         font-size: 20px;
-        transform: translate(-31px, 5px);
+        transform: translate(45px, 5px);
       }
       &-title {
         color: $textColor1;
         text-transform: uppercase;
         font-family: $openSans;
         font-weight: 600;
-        size: 18px;
+        font-size: 18px;
+        transform: translate(55px);
       }
       &-chevronIconUp {
         font-size: 18px;
         color: $textColor1;
-        transform: translate(15px);
+        transform: translate(-50px, -10px);
       }
     }
   }
@@ -55,6 +56,7 @@
     &-inp {
       border: solid 1px $textColor5;
       padding: 3px 190px 7px 9px;
+      color: $textColor11;
     }
   }
   &__first--position {
@@ -79,6 +81,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: -155px;
 
     &-label {
       line-height: 20px;
@@ -176,4 +179,7 @@
       padding: 3px 188px 7px 9px;
     }
   }
+}
+::placeholder {
+  color: $textColor11;
 }

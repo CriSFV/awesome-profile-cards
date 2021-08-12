@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+  .wholeMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "form preview";
+  }
+  .preview {
+    grid-area: preview;
+  }
+  .form {
+    grid-area: form;
+  }
+}
