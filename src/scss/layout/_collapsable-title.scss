@@ -1,0 +1,20 @@
+.collapsable {
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: (1fr 6fr 1fr);
+  align-items: center;
+
+  &__iconStart {
+    color: $textColor2;
+    margin-left: 20px;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: $textColor1;
+    font-family: $openSans;
+  }
+
+  &__iconEnd {
+    color: $textColor1;
+  }
+}

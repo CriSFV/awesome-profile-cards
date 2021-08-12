@@ -1,21 +1,25 @@
 <section>
-  <fieldset class="share">
-    <div class="share__first">
-      <i class="fas fa-share-alt share_icon"></i>
-      <h3 class="share__title">comparte</h3>
-      <i class="fas fa-chevron-up share_flecha"></i>
-    </div>
-    <div class="share__second">
-      <button class="share__buttom">
-        <i class="far fa-address-card"></i> Crear tarjeta
-      </button>
-    </div>
-    <div class="share__collapsable">
-      <h3 class="share__collapsable__title">La tarjeta ha sido creada</h3>
-      <span class="card__http">http:direcciontarjetagenerada</span>
-      <button class="share__collapsable__button">
-        <i class="fab fa-twitter"></i> Compartir en twitter
-      </button>
-    </div>
-  </fieldset>
+  <div class="topBorder2">
+    <include
+      src="./collapsable-title.html"
+      iconStart="fas fa-share-alt"
+      title="Comparte"
+      iconEnd="fas fa-chevron-up"
+    >
+    </include>
+    <fieldset class="share">
+      <div class="share__second">
+        <button class="share__buttom">
+          <i class="far fa-address-card"></i> Crear tarjeta
+        </button>
+      </div>
+      <div class="share__collapsable">
+        <h3 class="share__collapsable__title">La tarjeta ha sido creada</h3>
+        <span class="card__http">http:direcciontarjetagenerada</span>
+        <button class="share__collapsable__button">
+          <i class="fab fa-twitter"></i> Compartir en twitter
+        </button>
+      </div>
+    </fieldset>
+  </div>
 </section>

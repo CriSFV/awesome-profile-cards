@@ -1,9 +1,13 @@
 .preview {
   background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
   height: 457px;
-  width: 320px;
+  width: 100%;
   margin: auto;
   line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @media (min-width: 768px) {
     width: 329px;
     height: 812px;
@@ -17,7 +21,7 @@
     background-color: #bfcdd0;
     color: $textColorGrey;
     text-transform: uppercase;
-    margin: 38px 200px 20px 45px;
+    margin: 38px 200px 0px 30px;
     width: 75px;
     height: 30px;
     @media (min-width: 768px) {
