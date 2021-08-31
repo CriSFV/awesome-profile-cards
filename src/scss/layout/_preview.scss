@@ -9,11 +9,11 @@
   justify-content: center;
   align-items: center;
   @media (min-width: 768px) {
-    width: 329px;
-    height: 812px;
+    height: 98.4%;
     border-radius: 6px;
     margin: 23px 40px;
   }
+
   &__button {
     border: $textColor8 1px solid;
     border-radius: 15px;
@@ -66,6 +66,7 @@
     text-align: center;
   }
 }
+
 .fa-trash-alt {
   padding: 3px;
 }
