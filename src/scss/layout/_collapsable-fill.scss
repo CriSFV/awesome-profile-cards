@@ -7,41 +7,6 @@
   padding: 27px 19px 30px 20px;
   width: 100%;
 
-  // &__legend {
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-  // align-items: center;
-  // transform: translateY(15px);
-
-  // &--subcontainer {
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   margin-right: 168px;
-
-  //   &-keyboardIcon {
-  //     color: $textColor2;
-  //     font-size: 20px;
-  //     transform: translate(45px, 5px);
-  //   }
-  //   &-title {
-  //     color: $textColor1;
-  //     text-transform: uppercase;
-  //     font-family: $openSans;
-  //     font-weight: 600;
-  //     font-size: 18px;
-  //     transform: translate(55px);
-  //     }
-
-  //     &-chevronIconUp {
-  //       font-size: 18px;
-  //       color: $textColor1;
-  //       transform: translate(-50px, -10px);
-  //     }
-  //   }
-  // }
-
   &__first--name {
     display: flex;
     flex-direction: column;
@@ -98,6 +63,7 @@
       margin-top: 10px;
     }
     &-button {
+      text-align: center;
       background-color: $textColor2;
       width: 140px;
       height: 30px;
@@ -187,4 +153,7 @@
 .topBorder {
   border-top: 1px solid $textColor9;
   margin: 50px 30px 10px 30px;
+}
+.hidden_button {
+  display: none;
 }
