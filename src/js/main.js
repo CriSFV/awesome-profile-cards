@@ -5,6 +5,7 @@ const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
+
 /**
  * Recoge el archivo añadido al campo de tipo "file"
  * y lo carga en nuestro objeto FileReader para que
@@ -46,3 +47,27 @@ function writeImage() {
  * - al campo oculto para cuando cambie su value
  */
 fileField.addEventListener('change', getImage);
+
+const allTitle = document.querySelectorAll('.js_collapsable');
+const iconArrow = document.querySelectorAll('.js_iconEnd');
+const allSections = document.querySelectorAll('.js_section');
+
+function arrowReverse(){
+  for(const arrow of iconArrow){
+    arrow.classList.toggle('arrowReverse');
+  }
+}
+
+function closeOpenCollapsables(){
+  for(const eachSection of allSections){
+    eachSection.classList.toggle('hidden');
+  }
+}
+function handleClickCollapsable(){
+  arrowReverse();
+  closeOpenCollapsables();
+}
+
+for(const eachTitle of allTitle) {
+  eachTitle.addEventListener('click', handleClickCollapsable);
+}
