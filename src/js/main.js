@@ -40,11 +40,6 @@ function writeImage() {
  * que está oculto
  */
 
-//Nota del grupo: quitar estos comentarios cd sepamos xq da error
-//function fakeFileClick(){
-// fileField.click();
-//}
-
 /**
  * Añadimos los listeners necesarios:
  * - al botón visible para generar el click automático
