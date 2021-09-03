@@ -1,7 +1,7 @@
 .collapsable {
   font-size: 18px;
   display: grid;
-  grid-template-columns: (1fr 6fr 1fr);
+  grid-template-columns: (50px 1fr 25px);
   align-items: center;
 
   &__iconStart {
