@@ -1,6 +1,6 @@
 .footer__container {
   width: 100%;
-  height: 110px;
+  height: 19.36vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
   @media all and(min-width:768px) {
     flex-direction: row;
     justify-content: space-between;
+    height: 5.86vh;
   }
   .footer__paragraph {
     margin-top: 18px;
