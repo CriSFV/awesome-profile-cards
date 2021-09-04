@@ -63,7 +63,8 @@ function closeOpenCollapsables(){
     eachSection.classList.toggle('hidden');
   }
 }
-function handleClickCollapsable(){
+function handleClickCollapsable(ev){
+  //const eventTarget = ev.target.id;
   arrowReverse();
   closeOpenCollapsables();
 }
@@ -71,3 +72,17 @@ function handleClickCollapsable(){
 for(const eachTitle of allTitle) {
   eachTitle.addEventListener('click', handleClickCollapsable);
 }
+
+/*function handleClickCollapsable(){
+  for(let index=0; index<allTitle.length; index++){
+    const data = allTitle[index];
+    const dataTarget= data.target;
+    dataTarget.classList.add('arrowReverse');
+    //if(data===allTitle.currentTarget){
+    // arrowReverse();
+    //closeOpenCollapsables();
+    //}
+    //console.log(data.target);
+  }
+}*/
+
