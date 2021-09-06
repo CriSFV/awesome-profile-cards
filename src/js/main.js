@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
 const fr = new FileReader();
-const fileField = document.querySelector(".js__profile-upload-btn");
-const profileImage = document.querySelector(".js__profile-image");
-const profilePreview = document.querySelector(".js__profile-preview");
+const fileField = document.querySelector('.js__profile-upload-btn');
+const profileImage = document.querySelector('.js__profile-image');
+const profilePreview = document.querySelector('.js__profile-preview');
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -15,7 +15,7 @@ const profilePreview = document.querySelector(".js__profile-preview");
 
 function getImage(e) {
   const myFile = e.currentTarget.files[0];
-  fr.addEventListener("load", writeImage);
+  fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
 
@@ -43,21 +43,21 @@ function writeImage() {
  * - al botón visible para generar el click automático
  * - al campo oculto para cuando cambie su value
  */
-fileField.addEventListener("change", getImage);
+fileField.addEventListener('change', getImage);
 
-const allTitle = document.querySelectorAll(".js_collapsable");
-const iconArrow = document.querySelectorAll(".js_iconEnd");
-const allSections = document.querySelectorAll(".js_section");
+const allTitle = document.querySelectorAll('.js_collapsable');
+const iconArrow = document.querySelectorAll('.js_iconEnd');
+const allSections = document.querySelectorAll('.js_section');
 
 function arrowReverse() {
   for (const arrow of iconArrow) {
-    arrow.classList.toggle("arrowReverse");
+    arrow.classList.toggle('arrowReverse');
   }
 }
 
 function closeOpenCollapsables() {
   for (const eachSection of allSections) {
-    eachSection.classList.toggle("hidden");
+    eachSection.classList.toggle('hidden');
   }
 }
 function handleClickCollapsable(ev) {
@@ -67,7 +67,7 @@ function handleClickCollapsable(ev) {
 }
 
 for (const eachTitle of allTitle) {
-  eachTitle.addEventListener("click", handleClickCollapsable);
+  eachTitle.addEventListener('click', handleClickCollapsable);
 }
 
 /*function handleClickCollapsable(){
@@ -83,30 +83,29 @@ for (const eachTitle of allTitle) {
   }
 }*/
 
-const previewName = document.querySelector(".js_previewName");
-const allInputs = document.querySelectorAll(".js_allInputs");
-const previewDescription = document.querySelector(".js_previewDescription");
-const inputName = document.querySelector(".js_inputName");
-//const previewEmail = document.querySelector ('.js_previewEmail');
-//const emailInput = document.querySelector('.emailInput');
-const inputJob = document.querySelector(".js_inputJob");
-const resetButton = document.querySelector(".js_resetButton");
+const previewName = document.querySelector('.js_previewName');
+const allInputs = document.querySelectorAll('.js_allInputs');
+const previewDescription = document.querySelector('.js_previewDescription');
+const inputName = document.querySelector('.js_inputName');
+const previewEmail = document.querySelector ('.js_previewEmail');
+const emailInput = document.querySelector('.emailInput');
+const inputJob = document.querySelector('.js_inputJob');
+const resetButton = document.querySelector('.js_resetButton');
 //función para volcar nombre-apellido tarjeta previsualización:
 function handleAddInput() {
   previewName.textContent = inputName.value;
   previewDescription.textContent = inputJob.value;
+  previewEmail.href= emailInput.value;
 }
 
 for (const eachInput of allInputs) {
-  eachInput.addEventListener("keyup", handleAddInput);
+  eachInput.addEventListener('keyup', handleAddInput);
 }
 
 //función para resetear formulario:
+
 function handleResetInput() {
-  inputName.value = "";
-  previewName.textContent = "Nombre Apellidos";
-  inputJob.value = "";
-  previewDescription.textContent = "Descripción";
+  location.reload();
 }
 
-resetButton.addEventListener("click", handleResetInput);
+resetButton.addEventListener('click', handleResetInput);
