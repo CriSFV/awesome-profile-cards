@@ -1,10 +1,9 @@
-'use strict';
+"use strict";
 
 const fr = new FileReader();
-const fileField = document.querySelector('.js__profile-upload-btn');
-const profileImage = document.querySelector('.js__profile-image');
-const profilePreview = document.querySelector('.js__profile-preview');
-
+const fileField = document.querySelector(".js__profile-upload-btn");
+const profileImage = document.querySelector(".js__profile-image");
+const profilePreview = document.querySelector(".js__profile-preview");
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -14,12 +13,11 @@ const profilePreview = document.querySelector('.js__profile-preview');
  * al tener los datos listos
  * @param {evento} e**/
 
-function getImage(e){
+function getImage(e) {
   const myFile = e.currentTarget.files[0];
-  fr.addEventListener('load', writeImage);
+  fr.addEventListener("load", writeImage);
   fr.readAsDataURL(myFile);
 }
-
 
 /**
  * Una vez tenemos los datos listos en el FR podemos
@@ -35,7 +33,6 @@ function writeImage() {
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 }
 
-
 /**
  * Genera un click automático en nuesto campo de tipo "file"
  * que está oculto
@@ -46,31 +43,31 @@ function writeImage() {
  * - al botón visible para generar el click automático
  * - al campo oculto para cuando cambie su value
  */
-fileField.addEventListener('change', getImage);
+fileField.addEventListener("change", getImage);
 
-const allTitle = document.querySelectorAll('.js_collapsable');
-const iconArrow = document.querySelectorAll('.js_iconEnd');
-const allSections = document.querySelectorAll('.js_section');
+const allTitle = document.querySelectorAll(".js_collapsable");
+const iconArrow = document.querySelectorAll(".js_iconEnd");
+const allSections = document.querySelectorAll(".js_section");
 
-function arrowReverse(){
-  for(const arrow of iconArrow){
-    arrow.classList.toggle('arrowReverse');
+function arrowReverse() {
+  for (const arrow of iconArrow) {
+    arrow.classList.toggle("arrowReverse");
   }
 }
 
-function closeOpenCollapsables(){
-  for(const eachSection of allSections){
-    eachSection.classList.toggle('hidden');
+function closeOpenCollapsables() {
+  for (const eachSection of allSections) {
+    eachSection.classList.toggle("hidden");
   }
 }
-function handleClickCollapsable(ev){
+function handleClickCollapsable(ev) {
   //const eventTarget = ev.target.id;
   arrowReverse();
   closeOpenCollapsables();
 }
 
-for(const eachTitle of allTitle) {
-  eachTitle.addEventListener('click', handleClickCollapsable);
+for (const eachTitle of allTitle) {
+  eachTitle.addEventListener("click", handleClickCollapsable);
 }
 
 /*function handleClickCollapsable(){
@@ -86,21 +83,21 @@ for(const eachTitle of allTitle) {
   }
 }*/
 
-const previewName = document.querySelector ('.js_previewName');
-const allInputs = document.querySelectorAll('.js_allInputs');
-const previewDescription = document.querySelector ('.js_previewDescription');
-const inputName = document.querySelector ('.js_inputName');
-const previewEmail = document.querySelector ('.js_previewEmail');
-const emailInput = document.querySelector('.emailInput');
-const inputJob = document.querySelector('.js_inputJob');
+const previewName = document.querySelector(".js_previewName");
+const allInputs = document.querySelectorAll(".js_allInputs");
+const previewDescription = document.querySelector(".js_previewDescription");
+const inputName = document.querySelector(".js_inputName");
+//const previewEmail = document.querySelector ('.js_previewEmail');
+//const emailInput = document.querySelector('.emailInput');
+const inputJob = document.querySelector(".js_inputJob");
 //función para volcar nombre-apellido tarjeta previsualización:
-function handleAddInput(){
+function handleAddInput() {
   previewName.textContent = inputName.value;
   previewDescription.textContent = inputJob.value;
 }
 
 for (const eachInput of allInputs) {
-  eachInput.addEventListener('keyup',handleAddInput);
+  eachInput.addEventListener("keyup", handleAddInput);
 }
 //función para resetear formulario:
 /*function handleAddInput(){}
