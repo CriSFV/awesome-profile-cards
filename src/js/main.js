@@ -48,25 +48,37 @@ function writeImage() {
  */
 fileField.addEventListener('change', getImage);
 
+
+
 const allTitle = document.querySelectorAll('.js_collapsable');
-const iconArrow = document.querySelectorAll('.js_iconEnd');
-const allSections = document.querySelectorAll('.js_section');
+const allSection =document.querySelectorAll('.js_section');
+startAgain();
 
-function arrowReverse(){
-  for(const arrow of iconArrow){
-    arrow.classList.toggle('arrowReverse');
+
+
+function arrowReverse(ev){
+  const titleElement = ev.currentTarget;
+  const arrowElement = titleElement.querySelector('.js_iconEnd');
+  arrowElement.classList.toggle('arrowReverse');
+}
+
+function closeOpenCollapsables(ev){
+  const titleElement = ev.currentTarget;
+  const childElement = titleElement.parentNode;
+  const elementHidden = childElement.querySelector('.js_section');
+  elementHidden.classList.toggle('hidden');
+}
+
+function startAgain(){
+  for(const eachSection of allSection){
+    eachSection.classList.add('hidden');
   }
 }
 
-function closeOpenCollapsables(){
-  for(const eachSection of allSections){
-    eachSection.classList.toggle('hidden');
-  }
-}
 function handleClickCollapsable(ev){
-  //const eventTarget = ev.target.id;
-  arrowReverse();
-  closeOpenCollapsables();
+  startAgain();
+  arrowReverse(ev);
+  closeOpenCollapsables(ev);
 }
 
 for(const eachTitle of allTitle) {
