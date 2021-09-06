@@ -85,10 +85,26 @@ for(const eachTitle of allTitle) {
     //console.log(data.target);
   }
 }*/
-const fillName = document.querySelector ( '.js_fillSectionName');
-const previewName = document.querySelector ('.js_previewName');
 
-fillName.addEventListener('keyup', (ev) => {
-  let nameValue = ev.target.value;
-  previewName.textContent = nameValue;
-});
+const previewName = document.querySelector ('.js_previewName');
+const allInputs = document.querySelectorAll('.js_allInputs');
+const previewDescription = document.querySelector ('.js_previewDescription');
+const inputName = document.querySelector ('.js_inputName');
+const previewEmail = document.querySelector ('.js_previewEmail');
+const emailInput = document.querySelector('.emailInput');
+const inputJob = document.querySelector('.js_inputJob');
+//función para volcar nombre-apellido tarjeta previsualización:
+function handleAddInput(){
+  previewName.textContent = inputName.value;
+  previewDescription.textContent = inputJob.value;
+}
+
+for (const eachInput of allInputs) {
+  eachInput.addEventListener('keyup',handleAddInput);
+}
+//función para resetear formulario:
+/*function handleAddInput(){}
+
+for (const eachInput of allInputs) {
+  eachInput.addEventListener('keyup',handleResetInput);
+}*/
