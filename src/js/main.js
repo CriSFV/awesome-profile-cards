@@ -92,3 +92,44 @@ fillName.addEventListener('keyup', (ev) => {
   let nameValue = ev.target.value;
   previewName.textContent = nameValue;
 });
+
+
+
+// JS DE LA PREVIEW PARTE DESIGN
+const coloursDesign = document.querySelectorAll('.js_design');
+const checkBoxRed = document.querySelector('.js_designcolourred');
+const checkBoxYellow = document.querySelector('.js_designcolouryellow');
+
+
+// for(const eachTitle of allTitle) {
+//   eachTitle.addEventListener('click', handleClickCollapsable);
+// }
+// function paintRed(){
+//   coloursDesign.classList.add('redpalette');
+//   console.log(coloursDesign);
+// }
+
+function paintRed(){
+  for(const eachSection of coloursDesign){
+    eachSection.classList.add('redpalette');
+  }
+}
+
+function paintYellow(){
+  for(const eachSection of coloursDesign){
+    eachSection.classList.remove('redpalette');
+    eachSection.classList.add('yellowpalette');
+  }
+}
+
+checkBoxRed.addEventListener('click', paintRed);
+console.log(checkBoxRed);
+checkBoxYellow.addEventListener('click', paintYellow);
+console.log(checkBoxYellow);
+
+// .addEventListener('click', (ev) => {
+//   let nameValue = ev.target.value;
+//   previewName.textContent = nameValue;
+// });
+
+

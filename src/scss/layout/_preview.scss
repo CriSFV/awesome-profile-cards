@@ -40,6 +40,7 @@
     font-weight: bold;
     font-size: 18px;
     padding: 21px 14px 2px 20px;
+    color: $textColor4;
   }
   &__description {
     font-family: $montserrat;
@@ -80,4 +81,30 @@
   background-color: #438792;
   position: absolute;
   transform: translateY(21px);
+}
+
+.redpalette {
+  &__name {
+    color: #420101;
+  }
+  .preview__pretty {
+    background-color: #bd1010;
+  }
+  &__icons--measures {
+    border: #e95626 solid 2px;
+    color: #420101;
+  }
+}
+
+.yellowpalette {
+  &__name {
+    color: #3e5b65;
+  }
+  .preview__pretty {
+    background-color: #eab052;
+  }
+  &__icons--measures {
+    border: #a0c0cf solid 2px;
+    color: #3e5b65;
+  }
 }
