@@ -90,6 +90,7 @@ const inputName = document.querySelector(".js_inputName");
 //const previewEmail = document.querySelector ('.js_previewEmail');
 //const emailInput = document.querySelector('.emailInput');
 const inputJob = document.querySelector(".js_inputJob");
+const resetButton = document.querySelector(".js_resetButton");
 //función para volcar nombre-apellido tarjeta previsualización:
 function handleAddInput() {
   previewName.textContent = inputName.value;
@@ -99,9 +100,13 @@ function handleAddInput() {
 for (const eachInput of allInputs) {
   eachInput.addEventListener("keyup", handleAddInput);
 }
-//función para resetear formulario:
-/*function handleAddInput(){}
 
-for (const eachInput of allInputs) {
-  eachInput.addEventListener('keyup',handleResetInput);
-}*/
+//función para resetear formulario:
+function handleResetInput() {
+  inputName.value = "";
+  previewName.textContent = "Nombre Apellidos";
+  inputJob.value = "";
+  previewDescription.textContent = "Descripción";
+}
+
+resetButton.addEventListener("click", handleResetInput);
