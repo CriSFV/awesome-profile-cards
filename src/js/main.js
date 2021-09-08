@@ -5,7 +5,6 @@ const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
-
 /**
  * Recoge el archivo añadido al campo de tipo "file"
  * y lo carga en nuestro objeto FileReader para que
@@ -14,12 +13,11 @@ const profilePreview = document.querySelector('.js__profile-preview');
  * al tener los datos listos
  * @param {evento} e**/
 
-function getImage(e){
+function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
-
 
 /**
  * Una vez tenemos los datos listos en el FR podemos
@@ -35,7 +33,6 @@ function writeImage() {
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 }
 
-
 /**
  * Genera un click automático en nuesto campo de tipo "file"
  * que está oculto
@@ -48,57 +45,46 @@ function writeImage() {
  */
 fileField.addEventListener('change', getImage);
 
-
-
 const allTitle = document.querySelectorAll('.js_collapsable');
-const allSection =document.querySelectorAll('.js_section');
-startAgain();
+const allSection = document.querySelectorAll('.js_section');
+const allArrows = document.querySelectorAll('.js_iconEnd');
 
-
-
-function arrowReverse(ev){
+function arrowReverse(ev) {
   const titleElement = ev.currentTarget;
   const arrowElement = titleElement.querySelector('.js_iconEnd');
-  arrowElement.classList.toggle('arrowReverse');
+  if (!arrowElement.classList.contains('arrowReverse')) {
+    arrowElement.classList.toggle('arrowReverse');
+  }
 }
 
-function closeOpenCollapsables(ev){
+function closeOpenCollapsables(ev) {
   const titleElement = ev.currentTarget;
   const childElement = titleElement.parentNode;
   const elementHidden = childElement.querySelector('.js_section');
   elementHidden.classList.toggle('hidden');
 }
 
-function startAgain(){
-  for(const eachSection of allSection){
+function startAgain() {
+  for (const eachSection of allSection) {
     eachSection.classList.add('hidden');
+  }
+  for (const eachArrow of allArrows) {
+    eachArrow.classList.remove('arrowReverse');
   }
 }
 
-function handleClickCollapsable(ev){
+function handleClickCollapsable(ev) {
   startAgain();
   arrowReverse(ev);
   closeOpenCollapsables(ev);
 }
 
-for(const eachTitle of allTitle) {
+for (const eachTitle of allTitle) {
   eachTitle.addEventListener('click', handleClickCollapsable);
 }
 
-/*function handleClickCollapsable(){
-  for(let index=0; index<allTitle.length; index++){
-    const data = allTitle[index];
-    const dataTarget= data.target;
-    dataTarget.classList.add('arrowReverse');
-    //if(data===allTitle.currentTarget){
-    // arrowReverse();
-    //closeOpenCollapsables();
-    //}
-    //console.log(data.target);
-  }
-}*/
-const fillName = document.querySelector ( '.js_fillSectionName');
-const previewName = document.querySelector ('.js_previewName');
+const fillName = document.querySelector('.js_fillSectionName');
+const previewName = document.querySelector('.js_previewName');
 
 fillName.addEventListener('keyup', (ev) => {
   let nameValue = ev.target.value;
