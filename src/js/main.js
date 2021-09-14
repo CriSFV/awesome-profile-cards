@@ -85,10 +85,5 @@ for (const eachTitle of allTitle) {
   eachTitle.addEventListener('click', handleClickCollapsable);
 }
 
-const fillName = document.querySelector('.js_fillSectionName');
-const previewName = document.querySelector('.js_previewName');
-
-fillName.addEventListener('keyup', (ev) => {
-  let nameValue = ev.target.value;
-  previewName.textContent = nameValue;
-});
+const allInputs = document.querySelectorAll('.js_allInputs');
+console.log (allInputs);
