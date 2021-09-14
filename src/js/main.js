@@ -60,7 +60,7 @@ function closeOpenCollapsables() {
     eachSection.classList.toggle('hidden');
   }
 }
-function handleClickCollapsable(ev) {
+function handleClickCollapsable() {
   //const eventTarget = ev.target.id;
   arrowReverse();
   closeOpenCollapsables();
@@ -84,24 +84,16 @@ for (const eachTitle of allTitle) {
 }*/
 const allInputs = document.querySelectorAll('.js_allInputs');
 const previewName = document.querySelector('.js_previewName');
-const inputName = document.querySelector('.js_inputName');
-const inputJob = document.querySelector('.js_inputJob');
 const previewDescription = document.querySelector('.js_previewDescription');
-const emailInput = document.querySelector('.emailInput');
 const previewEmail = document.querySelector ('.js_previewEmail');
-const inputPhone = document.querySelector('.js_inputPhone');
 const previewPhone = document.querySelector ('.js_previewPhone');
 const previewLinkedin = document.querySelector('.js_previewLinkedin');
 const resetButton = document.querySelector('.js_resetButton');
+const previewGithub = document.querySelector ('.js_previewGithub');
 
 const form = document.querySelector ('.js_form');
 
-//función para volcar nombre-apellido tarjeta previsualización:
-//function handleAddInput() {
-  //previewName.textContent = inputName.value;
-  //previewDescription.textContent = inputJob.value;
-  //previewEmail.href= emailInput.value;
-//}
+
 let data = {
   palette: '',
   name: '',
@@ -114,16 +106,13 @@ let data = {
 };
 
 function fillCard(data){
-  console.log('estoy aqui');
   if(data.name !== ''){
     allInputs[0].innerHTML = data.name;
     previewName.innerHTML = data.name;
-    console.log (data.name);
   }
   else if (data.job !== ''){
     allInputs[1].innerHTML = data.job;
     previewDescription.innerHTML = data.job;
-    console.log(data.job);
   }
   else if(data.phone !== ''){
     allInputs[2].innerHTML = data.phone;
@@ -132,16 +121,15 @@ function fillCard(data){
   else if(data.email !== ''){
     allInputs[3].innerHTML = data.email;
     previewEmail.setAttribute ('href', 'mailto:' + data.email);
-    //= 'mailto:' + data.email;
-    console.log (previewEmail.href);
   }
   else if(data.linkedin !== ''){
     allInputs[4].innerHTML = data.linkedin;
     previewLinkedin.href= data.linkedin;
   }
   else if(data.github !== ''){
-    //let href= 'https://github.com/' + data.github ;
-    //allInputs[5].setAttribute('.href', href );
+    let href= 'https://github.com/' + data.github;
+    allInputs[5].innerHTML = data.github;
+    previewGithub.href = href;
   }
 
 }
@@ -151,17 +139,14 @@ function handleFillData(ev) {
   if(ev.target.name === 'palette'){
     const inputName = ev.target.name;
     const inputValue = ev.target.value;
-    console.log(inputName, inputValue);
     data[inputName] = inputValue;
   }
   else{
     const inputId = ev.target.id;
     const inputValue = ev.target.value;
-    console.log(inputId, inputValue);
     data[inputId] = inputValue;
   }
 
-  console.log(data);
   fillCard(data);
   //applyColor(data);
 }
