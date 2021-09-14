@@ -80,15 +80,29 @@ fillName.addEventListener('keyup', (ev) => {
 
 /*aquí empieza el share*/
 const createButton = document.querySelector('.js_shareButton');
-console.log(createButton);
 
-// function createCard() {
-//   console.log('ahora tiene que crear tarjeta');
-// }
+//function createCard() {
+// console.log('ahora hacemos petición a la api');
+// fetch(
+//   'https://awesome-profile-cards.herokuapp.com/card' /*{
+//     method:'POST',
+//     body: JSON.stringify(nombreObjetoConLosDatosValue),
+//   headers:{
+//     'content-Type':'application/json'
+//   }
+// }*/
+// );
+// .then((response)=>response.json())
+// .then((data)=>{
+//   console.log('data');
+//   console.log('decidir que hacer con los datos: pintar url en el html');
+// ejecutar una función: si success === true la pinto y pinto el botton de twiter. Si genero la tarjeta con false, da error y pinta undefined
+// })
+//}
 
-function handleCreateCard(ev) {
+function handleCreateBtn(ev) {
   ev.preventDefault(); // esto hay que quitarlo cuando salga la tarjeta
-  // createCard();
+  // hacer la petición al fetch enviando datos: createCard();
   document.querySelector('.js_createdCard').classList.remove('hidden');
 }
-createButton.addEventListener('click', handleCreateCard);
+createButton.addEventListener('click', handleCreateBtn);
