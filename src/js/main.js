@@ -88,15 +88,18 @@ const createButton = document.querySelector('.js_shareButton');
 //     method:'POST',
 //     body: JSON.stringify(nombreObjetoConLosDatosValue),
 //   headers:{
-//     'content-Type':'application/json'
+//sandra: he puesto content en may
+//     'Content-Type':'application/json'
 //   }
 // }*/
-// );
+// )
 // .then((response)=>response.json())
 // .then((data)=>{
-//   console.log('data');
+//sandra: he quitado comillas de data
+//   console.log(data);
+//sandra: ese console.log nos da un array con 2 atrib: cardURL y success: true. si copiamos el contenido del atrib cardURL y lo pegamos al navegador nos redirecciona a la tarjeta del usuario, con enlaces funcionando, foto, todo.
 //   console.log('decidir que hacer con los datos: pintar url en el html');
-// ejecutar una función: si success === true la pinto y pinto el botton de twiter. Si genero la tarjeta con false, da error y pinta undefined
+// ejecutar una función: si success === true (sandra: o si data.cardURL === true) la pinto (sandra: la pinto en cardResultElement.innerHTML = data.cardURL) y pinto el botton de twiter. Si genero la tarjeta con false (else), da error y pinta undefined (sandra: podemos añadir un mensaje para el usuario que diga "rellena los campos requeridos")
 // })
 //}
 
