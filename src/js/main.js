@@ -53,7 +53,9 @@ function arrowReverse(ev) {
   const titleElement = ev.currentTarget;
   const arrowElement = titleElement.querySelector('.js_iconEnd');
   if (!arrowElement.classList.contains('arrowReverse')) {
-    arrowElement.classList.toggle('arrowReverse');
+    arrowElement.classList.add('arrowReverse');
+  } else {
+    arrowElement.classList.remove('arrowReverse');
   }
 }
 
