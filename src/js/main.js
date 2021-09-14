@@ -85,5 +85,88 @@ for (const eachTitle of allTitle) {
   eachTitle.addEventListener('click', handleClickCollapsable);
 }
 
+//llamamos a los inputs del formulario y a los campos a rellenar de la preview card:
 const allInputs = document.querySelectorAll('.js_allInputs');
-console.log (allInputs);
+const previewName = document.querySelector('.js_previewName');
+const previewDescription = document.querySelector('.js_previewDescription');
+const previewEmail = document.querySelector('.js_previewEmail');
+const previewPhone = document.querySelector('.js_previewPhone');
+const previewLinkedin = document.querySelector('.js_previewLinkedin');
+const previewGithub = document.querySelector('.js_previewGithub');
+
+//llamamos al botón de reset:
+const resetButton = document.querySelector('.js_resetButton');
+
+//llamamos al form:
+const form = document.querySelector('.js_form');
+
+
+
+//creamos un objeto vacío con los inputs del form:
+
+let data = {
+  palette: '',
+  name: '',
+  job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+};
+
+//llenamos la tarjeta con los datos de los inputs-enlaces:
+function fillCard(data){
+  if(data.name !== ''){
+    allInputs[0].innerHTML = data.name;
+    console.log (data.name);
+    previewName.innerHTML = data.name;
+    console.log (data);
+  }
+  else if (data.job !== ''){
+    allInputs[1].innerHTML = data.job;
+    previewDescription.innerHTML = data.job;
+    console.log (data.job);
+  }
+  else if(data.phone !== ''){
+    allInputs[2].innerHTML = data.phone;
+    previewPhone.href = data.phone;
+  }
+  else if(data.email !== ''){
+    allInputs[3].innerHTML = data.email;
+    previewEmail.setAttribute ('href', 'mailto:' + data.email);
+  }
+  else if(data.linkedin !== ''){
+    allInputs[4].innerHTML = data.linkedin;
+    previewLinkedin.href= data.linkedin;
+  }
+  else if(data.github !== ''){
+    let href= 'https://github.com/' + data.github;
+    allInputs[5].innerHTML = data.github;
+    previewGithub.href = href;
+  }
+
+}
+
+
+//creamos la función manejardora del evento:
+function handleFillData(ev) {
+  ev.preventDefault();
+  if(ev.target.name === 'palette'){
+    const inputName = ev.target.name;
+    const inputValue = ev.target.value;
+    data[inputName] = inputValue;
+  }
+  else{
+    const inputId = ev.target.id;
+    console.log (inputId);
+    const inputValue = ev.target.value;
+    console.log (inputValue);
+    data[inputId] = inputValue;
+  }
+
+  fillCard(data);
+  //applyColor(data);
+}
+
+//creamos el evento de escucha sobre el formulario:
+form.addEventListener('change', handleFillData);
