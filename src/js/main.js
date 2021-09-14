@@ -82,25 +82,90 @@ for (const eachTitle of allTitle) {
     //console.log(data.target);
   }
 }*/
-
-const previewName = document.querySelector('.js_previewName');
 const allInputs = document.querySelectorAll('.js_allInputs');
-const previewDescription = document.querySelector('.js_previewDescription');
+const previewName = document.querySelector('.js_previewName');
 const inputName = document.querySelector('.js_inputName');
-const previewEmail = document.querySelector ('.js_previewEmail');
-const emailInput = document.querySelector('.emailInput');
 const inputJob = document.querySelector('.js_inputJob');
+const previewDescription = document.querySelector('.js_previewDescription');
+const emailInput = document.querySelector('.emailInput');
+const previewEmail = document.querySelector ('.js_previewEmail');
+const inputPhone = document.querySelector('.js_inputPhone');
+const previewPhone = document.querySelector ('.js_previewPhone');
+
 const resetButton = document.querySelector('.js_resetButton');
+
+const form = document.querySelector ('.js_form');
+
 //función para volcar nombre-apellido tarjeta previsualización:
-function handleAddInput() {
-  previewName.textContent = inputName.value;
-  previewDescription.textContent = inputJob.value;
-  previewEmail.href= emailInput.value;
+//function handleAddInput() {
+  //previewName.textContent = inputName.value;
+  //previewDescription.textContent = inputJob.value;
+  //previewEmail.href= emailInput.value;
+//}
+let data = {
+  palette: '',
+  name: '',
+  job: '',
+  phone: '',
+  email: '',
+  linkedin: '',
+  github: '',
+// photo:'',
+};
+
+function fillCard(data){
+  console.log('estoy aqui');
+  if(data.name !== ''){
+    allInputs[0].innerHTML = data.name;
+    previewName.innerHTML = data.name;
+    console.log (data.name);
+  }
+  else if (data.job !== ''){
+    allInputs[1].innerHTML = data.job;
+    previewDescription.innerHTML = data.job;
+    console.log(data.job);
+  }
+  else if(data.phone !== ''){
+    allInputs[2].innerHTML = data.phone;
+    previewPhone.href = data.phone;
+  }
+  else if(data.email !== ''){
+    allInputs[3].innerHTML = data.email;
+    previewEmail.href= 'mailto:' + data.email;
+    console.log (previewEmail.href);
+  }
+  else if(data.linkedin !== ''){
+    allInputs[4].innerHTML = data.linkedin;
+
+  }
+  else if(data.github !== ''){
+    //let href= 'https://github.com/' + data.github ;
+    //allInputs[5].setAttribute('.href', href );
+  }
+
 }
 
-for (const eachInput of allInputs) {
-  eachInput.addEventListener('keyup', handleAddInput);
+function handleFillData(ev) {
+  ev.preventDefault();
+  if(ev.target.name === 'palette'){
+    const inputName = ev.target.name;
+    const inputValue = ev.target.value;
+    console.log(inputName, inputValue);
+    data[inputName] = inputValue;
+  }
+  else{
+    const inputId = ev.target.id;
+    const inputValue = ev.target.value;
+    console.log(inputId, inputValue);
+    data[inputId] = inputValue;
+  }
+
+  console.log(data);
+  fillCard(data);
+  //applyColor(data);
 }
+
+form.addEventListener('keyup', handleFillData);
 
 //función para resetear formulario:
 
