@@ -91,7 +91,7 @@ const emailInput = document.querySelector('.emailInput');
 const previewEmail = document.querySelector ('.js_previewEmail');
 const inputPhone = document.querySelector('.js_inputPhone');
 const previewPhone = document.querySelector ('.js_previewPhone');
-
+const previewLinkedin = document.querySelector('.js_previewLinkedin');
 const resetButton = document.querySelector('.js_resetButton');
 
 const form = document.querySelector ('.js_form');
@@ -131,12 +131,13 @@ function fillCard(data){
   }
   else if(data.email !== ''){
     allInputs[3].innerHTML = data.email;
-    previewEmail.href= 'mailto:' + data.email;
+    previewEmail.setAttribute ('href', 'mailto:' + data.email);
+    //= 'mailto:' + data.email;
     console.log (previewEmail.href);
   }
   else if(data.linkedin !== ''){
     allInputs[4].innerHTML = data.linkedin;
-
+    previewLinkedin.href= data.linkedin;
   }
   else if(data.github !== ''){
     //let href= 'https://github.com/' + data.github ;
