@@ -5,7 +5,6 @@ const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
-
 /**
  * Recoge el archivo añadido al campo de tipo "file"
  * y lo carga en nuestro objeto FileReader para que
@@ -14,12 +13,11 @@ const profilePreview = document.querySelector('.js__profile-preview');
  * al tener los datos listos
  * @param {evento} e**/
 
-function getImage(e){
+function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
-
 
 /**
  * Una vez tenemos los datos listos en el FR podemos
@@ -34,7 +32,6 @@ function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 }
-
 
 /**
  * Genera un click automático en nuesto campo de tipo "file"
@@ -52,43 +49,46 @@ const allTitle = document.querySelectorAll('.js_collapsable');
 const iconArrow = document.querySelectorAll('.js_iconEnd');
 const allSections = document.querySelectorAll('.js_section');
 
-function arrowReverse(){
-  for(const arrow of iconArrow){
+function arrowReverse() {
+  for (const arrow of iconArrow) {
     arrow.classList.toggle('arrowReverse');
   }
 }
 
-function closeOpenCollapsables(){
-  for(const eachSection of allSections){
+function closeOpenCollapsables() {
+  for (const eachSection of allSections) {
     eachSection.classList.toggle('hidden');
   }
 }
-function handleClickCollapsable(ev){
+function handleClickCollapsable() {
   //const eventTarget = ev.target.id;
   arrowReverse();
   closeOpenCollapsables();
 }
 
-for(const eachTitle of allTitle) {
+for (const eachTitle of allTitle) {
   eachTitle.addEventListener('click', handleClickCollapsable);
 }
 
-/*function handleClickCollapsable(){
-  for(let index=0; index<allTitle.length; index++){
-    const data = allTitle[index];
-    const dataTarget= data.target;
-    dataTarget.classList.add('arrowReverse');
-    //if(data===allTitle.currentTarget){
-    // arrowReverse();
-    //closeOpenCollapsables();
-    //}
-    //console.log(data.target);
-  }
-}*/
-const fillName = document.querySelector ( '.js_fillSectionName');
-const previewName = document.querySelector ('.js_previewName');
+const fillName = document.querySelector('.js_fillSectionName');
+const previewName = document.querySelector('.js_previewName');
 
 fillName.addEventListener('keyup', (ev) => {
   let nameValue = ev.target.value;
   previewName.textContent = nameValue;
 });
+
+/*aquí empieza el share*/
+const createButton = document.querySelector('.js_shareButton');
+console.log(createButton);
+
+// function createCard() {
+//   console.log('ahora tiene que crear tarjeta');
+// }
+
+function handleCreateCard(ev) {
+  ev.preventDefault(); // esto hay que quitarlo cuando salga la tarjeta
+  // createCard();
+  document.querySelector('.js_createdCard').classList.remove('hidden');
+}
+createButton.addEventListener('click', handleCreateCard);
