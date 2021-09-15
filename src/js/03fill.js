@@ -10,7 +10,7 @@ const previewGithub = document.querySelector('.js_previewGithub');
 const allImputs = document.querySelectorAll('.js_allInputs');
 
 // //llamamos al botón de reset:
-// //const resetButton = document.querySelector('.js_resetButton');
+const resetButton = document.querySelector('.js_resetButton');
 
 // //llamamos al form:
 const form = document.querySelector('.js_form');
@@ -29,8 +29,8 @@ let data = {
 
 // //llenamos la tarjeta con los datos de los inputs-enlaces:
 function fillCard(data) {
+  const palette = parseInt(data.palette);
   if (data.name !== '' || data.job !== '') {
-    const palette = parseInt(data.palette);
     if (palette === 1) {
       paintDefault();
     } else if (palette === 2) {
@@ -51,6 +51,13 @@ function fillCard(data) {
     previewEmail.setAttribute('href', '#');
     previewLinkedin.setAttribute('href', '#');
     previewGithub.setAttribute('href', '#');
+    if (palette === 1 || palette === '') {
+      paintDefault();
+    } else if (palette === 2) {
+      paintRed();
+    } else {
+      paintYellow();
+    }
     for (const eachImput of allImputs) {
       eachImput.value = '';
     }
@@ -63,11 +70,7 @@ function setInLocalStorage() {
 // function getLocalStorage() {
 //   const localStorageData = localStorage.getItem('dataUser');
 //   data = JSON.parse(localStorageData);
-//   if (localStorageData === null) {
-//     handleFillData();
-//   } else {
-//     fillCard(data);
-//   }
+//   fillCard(data);
 // }
 
 // //creamos la función manejardora del evento, donde rellena el objeto:
@@ -89,19 +92,23 @@ console.log(data);
 // //creamos el evento de escucha sobre el formulario:
 form.addEventListener('change', handleFillData);
 
-// // function handleResetBtn() {
-// //   data = {
-// //     palette: '',
-// //     name: '',
-// //     job: '',
-// //     phone: '',
-// //     email: '',
-// //     linkedin: '',
-// //     github: '',
-// //   };
-// //   //   localStorage.clear();
-// //   //   location.reload(); // recargar la pagina
-// //   fillCard(data);
-// // }
-// // resetButton.addEventListener('click', handleResetBtn);
+//getLocalStorage();
+
+function handleResetBtn() {
+  data = {
+    palette: '',
+    name: '',
+    job: '',
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: '',
+    photo: '',
+  };
+  console.log(data);
+  localStorage.clear();
+  location.reload(); // recargar la pagina
+  fillCard(data);
+}
+resetButton.addEventListener('click', handleResetBtn);
 // getLocalStorage();
