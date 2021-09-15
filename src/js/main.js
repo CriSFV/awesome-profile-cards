@@ -140,7 +140,7 @@ function setInLocalStorage() {
 function getLocalStorage() {
   const localStorageData = localStorage.getItem('dataUser');
   if (localStorageData === null) {
-    handleFillData(ev);
+    handleFillData();
   }
 }
 
