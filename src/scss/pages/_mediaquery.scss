@@ -2,7 +2,8 @@
   .wholeMain {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "form preview";
+    grid-template-areas: 'form preview';
+    min-height: 100vh;
   }
   .preview {
     grid-area: preview;
