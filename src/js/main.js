@@ -100,8 +100,6 @@ const resetButton = document.querySelector('.js_resetButton');
 //llamamos al form:
 const form = document.querySelector('.js_form');
 
-
-
 //creamos un objeto vacío con los inputs del form:
 
 let data = {
@@ -115,52 +113,26 @@ let data = {
 };
 
 //llenamos la tarjeta con los datos de los inputs-enlaces:
-function fillCard(data){
-  if(data.name !== ''){
-    allInputs[0].innerHTML = data.name;
-    console.log (data.name);
-    previewName.innerHTML = data.name;
-    console.log (data);
-  }
-  else if (data.job !== ''){
-    allInputs[1].innerHTML = data.job;
-    previewDescription.innerHTML = data.job;
-    console.log (data.job);
-  }
-  else if(data.phone !== ''){
-    allInputs[2].innerHTML = data.phone;
-    previewPhone.href = data.phone;
-  }
-  else if(data.email !== ''){
-    allInputs[3].innerHTML = data.email;
-    previewEmail.setAttribute ('href', 'mailto:' + data.email);
-  }
-  else if(data.linkedin !== ''){
-    allInputs[4].innerHTML = data.linkedin;
-    previewLinkedin.href= data.linkedin;
-  }
-  else if(data.github !== ''){
-    let href= 'https://github.com/' + data.github;
-    allInputs[5].innerHTML = data.github;
-    previewGithub.href = href;
-  }
-
+function fillCard(data) {
+  console.log(data);
+  previewName.innerHTML = data.name;
+  previewDescription.innerHTML = data.job;
+  previewPhone.href = 'phone:' + data.phone;
+  previewEmail.setAttribute('href', 'mailto:' + data.email);
+  previewLinkedin.setAttribute('href', data.linkedin);
+  previewGithub.setAttribute('href', 'https://github.com/' + data.github);
 }
-
 
 //creamos la función manejardora del evento:
 function handleFillData(ev) {
   ev.preventDefault();
-  if(ev.target.name === 'palette'){
+  if (ev.target.name === 'palette') {
     const inputName = ev.target.name;
     const inputValue = ev.target.value;
     data[inputName] = inputValue;
-  }
-  else{
+  } else {
     const inputId = ev.target.id;
-    console.log (inputId);
     const inputValue = ev.target.value;
-    console.log (inputValue);
     data[inputId] = inputValue;
   }
 
