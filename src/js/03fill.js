@@ -68,7 +68,7 @@ function setInLocalStorage() {
 // function getLocalStorage() {
 //   const localStorageData = localStorage.getItem('dataUser');
 //   data = JSON.parse(localStorageData);
-//   fillCard(data);
+//   //fillCard(data);
 // }
 
 // //creamos la función manejardora del evento, donde rellena el objeto:
@@ -109,4 +109,4 @@ function handleResetBtn() {
   fillCard(data);
 }
 resetButton.addEventListener('click', handleResetBtn);
-// getLocalStorage();
+//getLocalStorage();
