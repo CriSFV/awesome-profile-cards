@@ -1,4 +1,3 @@
-'use strict';
 const coloursDesign = document.querySelectorAll('.js_design');
 const paintColor = document.querySelectorAll('.js_designColor');
 

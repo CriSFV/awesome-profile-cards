@@ -1,7 +1,9 @@
 <div>
-  <include src="./collapsable-title.html" iconStart="far fa-object-ungroup cloningicon" title="Diseña"
-    iconEnd="fas fa-chevron-up">
-  </include>
+  <div class="collapsable js_collapsable">
+    <i class="far fa-object-ungroup cloningicon collapsable__iconStart"></i>
+    <h3 class="collapsable__title">Diseña</h3>
+    <i class="fas fa-chevron-up collapsable__iconEnd js_iconEnd arrowReverse"></i>
+  </div>
   <section class="wholecollapsable-design js_section" id="desing">
     <!-- <div class="titledesignflex">
     <i class="far fa-object-ungroup cloningicon"></i>
@@ -14,7 +16,7 @@
       <h4 class="titlecolours">colores</h4>
       <div class="colourboxesmaster js_designevent">
         <label class="label__design" for="colour1">
-          <input id="1" class="design__input js_design" type="radio" value="1" name="palette" />
+          <input id="1" class="design__input js_design" type="radio" value="1" name="palette" checked />
           <ul class="colourboxes colourone">
             <li class="item1-item1 li">Color A</li>
             <li class="item1-item2 li">Color B</li>

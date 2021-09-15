@@ -1,5 +1,3 @@
-'use strict';
-
 //llamamos a los inputs del formulario y a los campos a rellenar de la preview card:
 const previewName = document.querySelector('.js_previewName');
 const previewDescription = document.querySelector('.js_previewDescription');
@@ -18,7 +16,7 @@ const form = document.querySelector('.js_form');
 // //creamos un objeto vacío con los inputs del form:
 
 let data = {
-  palette: '',
+  palette: '1',
   name: '',
   job: '',
   phone: '',

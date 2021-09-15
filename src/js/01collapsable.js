@@ -1,4 +1,3 @@
-'use strict';
 const allTitle = document.querySelectorAll('.js_collapsable');
 const allSection = document.querySelectorAll('.js_section');
 const allArrows = document.querySelectorAll('.js_iconEnd');

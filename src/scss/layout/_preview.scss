@@ -1,6 +1,5 @@
 .preview {
   background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
-  //height: 457px;
   margin: 0;
   line-height: 20px;
   display: flex;
@@ -10,7 +9,7 @@
   height: 457px;
 
   @media (min-width: 768px) {
-    height: 98.4%;
+    height: 97.4%;
     border-radius: 6px;
     margin: 23px 40px;
   }
@@ -48,7 +47,6 @@
     padding: 2px 52px 10px 20px;
   }
   &__image {
-    //background-image: url(../images/tarjetaSonrisa.jpg);
     background-size: cover;
     background-position: center;
     width: 240px;

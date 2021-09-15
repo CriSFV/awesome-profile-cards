@@ -1,4 +1,3 @@
-'use strict';
 const createButton = document.querySelector('.js_shareButton');
 const urlCard = document.querySelector('.js_urlCard');
 const notCreated = document.querySelector('.js_notCreate');
