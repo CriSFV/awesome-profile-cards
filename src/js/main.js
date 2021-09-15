@@ -99,26 +99,33 @@ fillName.addEventListener('keyup', (ev) => {
 const coloursDesign = document.querySelectorAll('.js_design');
 const checkBoxRed = document.querySelector('.js_designcolourred');
 const checkBoxYellow = document.querySelector('.js_designcolouryellow');
+const checkBoxDefault = document.querySelector('.js_designcolourdefault');
 
-
-// for(const eachTitle of allTitle) {
-//   eachTitle.addEventListener('click', handleClickCollapsable);
-// }
-// function paintRed(){
-//   coloursDesign.classList.add('redpalette');
-//   console.log(coloursDesign);
-// }
 
 function paintRed(){
   for(const eachSection of coloursDesign){
+    eachSection.classList.remove('defaultpalette');
+    eachSection.classList.remove('yellowpalette');
     eachSection.classList.add('redpalette');
+    // const exit = eachSection.classList.replace(eachSection.classList.value ,'redpalette');
+    // if(!exit) console.log('errroooooooor');
   }
+  console.log(paintRed);
 }
 
 function paintYellow(){
   for(const eachSection of coloursDesign){
+    eachSection.classList.remove('defaultpalette');
     eachSection.classList.remove('redpalette');
     eachSection.classList.add('yellowpalette');
+  }
+}
+
+function paintDefault(){
+  for(const eachSection of coloursDesign){
+    eachSection.classList.remove('yellowpalette');
+    eachSection.classList.remove('redpalette');
+    eachSection.classList.add('defaultpalette');
   }
 }
 
@@ -126,10 +133,7 @@ checkBoxRed.addEventListener('click', paintRed);
 console.log(checkBoxRed);
 checkBoxYellow.addEventListener('click', paintYellow);
 console.log(checkBoxYellow);
+checkBoxDefault.addEventListener('click', paintDefault);
 
-// .addEventListener('click', (ev) => {
-//   let nameValue = ev.target.value;
-//   previewName.textContent = nameValue;
-// });
 
 

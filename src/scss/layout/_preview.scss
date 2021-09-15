@@ -84,27 +84,40 @@
 }
 
 .redpalette {
-  &__name {
+  .preview__name {
     color: #420101;
   }
   .preview__pretty {
     background-color: #bd1010;
   }
-  &__icons--measures {
+  .preview__icons--measures {
     border: #e95626 solid 2px;
     color: #420101;
   }
 }
 
 .yellowpalette {
-  &__name {
+  .preview__name {
     color: #3e5b65;
   }
   .preview__pretty {
     background-color: #eab052;
   }
-  &__icons--measures {
+  .preview__icons--measures {
     border: #a0c0cf solid 2px;
     color: #3e5b65;
+  }
+}
+
+.defaultpalette {
+  & .preview__name {
+    color: #420101;
+  }
+  & .preview__pretty {
+    background-color: #bd1010;
+  }
+  & .preview__icons--measures {
+    border: #e95626 solid 2px;
+    color: #420101;
   }
 }
