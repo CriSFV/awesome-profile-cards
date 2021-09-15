@@ -5,17 +5,19 @@
   <section class="fill js_section js_fillSectionName hidden" id="fill">
     <fieldset class="fill__first">
       <div class="fill__first--name">
-        <label for="fullName" class="fill__first--name-lab">Nombre completo</label>
-        <input class="fill__first--name-inp" placeholder="Ej: Sally Jill" id="name" type="text" name="name" />
+        <label for="fullName" class="fill__first--name-lab">Nombre completo *</label>
+        <input class="fill__first--name-inp js_allInputs" placeholder="Ej: Sally Jill" id="name" type="text"
+          name="name" />
       </div>
       <div class="fill__first--position">
-        <label for="position" class="fill__first--position-lab">Puesto</label>
-        <input class="fill__first--position-inp" placeholder="Ej: Front-end unicorn" id="job" type="text" name="job" />
+        <label for="position" class="fill__first--position-lab">Puesto *</label>
+        <input class="fill__first--position-inp js_allInputs" placeholder="Ej: Front-end unicorn" id="job" type="text"
+          name="job" />
       </div>
     </fieldset>
 
     <fieldset class="fill__second">
-      <label class="fill__second-label">Imagen de perfil</label>
+      <label class="fill__second-label">Imagen de perfil *</label>
       <div class="fill__second-buttoncheck">
         <label class="fill__second-button" for="img-selector">Añadir imagen</label>
         <input type="file" id="img-selector" class="hidden_button js__profile-upload-btn" value="Añadir imagen" />
@@ -25,23 +27,25 @@
 
     <fieldset class="fill__third">
       <div class="fill__third--mail">
-        <label for="email" class="fill__third--mail-lab">Email</label>
-        <input class="fill__third--mail-inp" placeholder="Ej: sally-hill@gmail.com" id="email" type="email"
+        <label for="email" class="fill__third--mail-lab">Email *</label>
+        <input class="fill__third--mail-inp js_allInputs" placeholder="Ej: sally-hill@gmail.com" id="email" type="email"
           name="email" />
       </div>
       <div class="fill__third--tel">
         <label for="telephone" class="fill__third--tel-lab">Teléfono</label>
-        <input class="fill__third--tel-inp" placeholder="Ej: 555-55-55-55" id="phone" type="tel" name="phone" />
+        <input class="fill__third--tel-inp js_allInputs" placeholder="Ej: 555-55-55-55" id="phone" type="tel"
+          name="phone" />
       </div>
       <div class="fill__third--linked">
-        <label for="linkedinName" class="fill__third--linked-lab">Linkedin</label>
-        <input class="fill__third--linked-inp" placeholder="Ej: linkedin.com/in/sally.hill" id="linkedin" type="text"
-          name="linkedin" />
+        <label for="linkedinName" class="fill__third--linked-lab">Linkedin *</label>
+        <input class="fill__third--linked-inp js_allInputs" placeholder="Ej: linkedin.com/in/sally.hill" id="linkedin"
+          type="text" name="linkedin" />
       </div>
       <!-- se consideraría type text para un texto que empieza con arroba¿? -->
       <div class="fill__third--git">
-        <label for="gitHubName" class="fill__third--git-lab">Github</label>
-        <input class="fill__third--git-inp" placeholder="Ej: @sally-hill" id="github" type="text" name="github" />
+        <label for="gitHubName" class="fill__third--git-lab">Github *</label>
+        <input class="fill__third--git-inp js_allInputs" placeholder="Ej: @sally-hill" id="github" type="text"
+          name="github" />
         <!-- no hay input type=sumbit value= enviar info porque la información se va mostrando en el momento en la tarjeta y no se manda a ningún lugar -->
       </div>
     </fieldset>

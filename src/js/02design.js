@@ -10,7 +10,6 @@ function paintRed() {
     eachSection.classList.remove('yellowpalette');
     eachSection.classList.add('redpalette');
   }
-  console.log(paintRed);
 }
 
 function paintYellow() {
@@ -30,7 +29,5 @@ function paintDefault() {
 }
 
 checkBoxRed.addEventListener('click', paintRed);
-console.log(checkBoxRed);
 checkBoxYellow.addEventListener('click', paintYellow);
-console.log(checkBoxYellow);
 checkBoxDefault.addEventListener('click', paintDefault);
