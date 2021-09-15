@@ -1,11 +1,19 @@
 'use strict';
 const coloursDesign = document.querySelectorAll('.js_design');
-const checkBoxRed = document.querySelector('.js_designcolourred');
-const checkBoxYellow = document.querySelector('.js_designcolouryellow');
-const checkBoxDefault = document.querySelector('.js_designcolourdefault');
+const paintColor = document.querySelectorAll('.js_designColor');
 
+function paintPreview(ev) {
+  const paletteClicked = parseInt(ev.target.id);
+  if (paletteClicked === 1) {
+    paintDefault();
+  } else if (paletteClicked === 2) {
+    paintRed();
+  } else {
+    paintYellow();
+  }
+}
 function paintRed() {
-  for (const eachSection of coloursDesign) {
+  for (const eachSection of paintColor) {
     eachSection.classList.remove('defaultpalette');
     eachSection.classList.remove('yellowpalette');
     eachSection.classList.add('redpalette');
@@ -13,7 +21,7 @@ function paintRed() {
 }
 
 function paintYellow() {
-  for (const eachSection of coloursDesign) {
+  for (const eachSection of paintColor) {
     eachSection.classList.remove('defaultpalette');
     eachSection.classList.remove('redpalette');
     eachSection.classList.add('yellowpalette');
@@ -21,13 +29,13 @@ function paintYellow() {
 }
 
 function paintDefault() {
-  for (const eachSection of coloursDesign) {
+  for (const eachSection of paintColor) {
     eachSection.classList.remove('yellowpalette');
     eachSection.classList.remove('redpalette');
     eachSection.classList.add('defaultpalette');
   }
 }
 
-checkBoxRed.addEventListener('click', paintRed);
-checkBoxYellow.addEventListener('click', paintYellow);
-checkBoxDefault.addEventListener('click', paintDefault);
+for (const eachinput of coloursDesign) {
+  eachinput.addEventListener('click', paintPreview);
+}
