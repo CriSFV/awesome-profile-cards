@@ -9,13 +9,13 @@ const previewLinkedin = document.querySelector('.js_previewLinkedin');
 const previewGithub = document.querySelector('.js_previewGithub');
 const allImputs = document.querySelectorAll('.js_allInputs');
 
-//llamamos al botón de reset:
-const resetButton = document.querySelector('.js_resetButton');
+// //llamamos al botón de reset:
+// //const resetButton = document.querySelector('.js_resetButton');
 
-//llamamos al form:
+// //llamamos al form:
 const form = document.querySelector('.js_form');
 
-//creamos un objeto vacío con los inputs del form:
+// //creamos un objeto vacío con los inputs del form:
 
 let data = {
   palette: '',
@@ -27,7 +27,7 @@ let data = {
   github: '',
 };
 
-//llenamos la tarjeta con los datos de los inputs-enlaces:
+// //llenamos la tarjeta con los datos de los inputs-enlaces:
 function fillCard(data) {
   if (data.name !== '' || data.job !== '') {
     const palette = parseInt(data.palette);
@@ -60,19 +60,18 @@ function setInLocalStorage() {
   const stringDataUser = JSON.stringify(data);
   localStorage.setItem('dataUser', stringDataUser);
 }
-function getLocalStorage() {
-  const localStorageData = localStorage.getItem('dataUser');
-  data = JSON.parse(localStorageData);
-  if (localStorageData === null) {
-    handleFillData();
-  } else {
-    fillCard(data);
-  }
-}
+// function getLocalStorage() {
+//   const localStorageData = localStorage.getItem('dataUser');
+//   data = JSON.parse(localStorageData);
+//   if (localStorageData === null) {
+//     handleFillData();
+//   } else {
+//     fillCard(data);
+//   }
+// }
 
-//creamos la función manejardora del evento, donde rellena el objeto:
+// //creamos la función manejardora del evento, donde rellena el objeto:
 function handleFillData(ev) {
-  ev.preventDefault();
   if (ev.target.name === 'palette') {
     const inputName = ev.target.name;
     const inputValue = ev.target.value;
@@ -82,26 +81,27 @@ function handleFillData(ev) {
     const inputValue = ev.target.value;
     data[inputId] = inputValue;
   }
+
   setInLocalStorage();
   fillCard(data);
 }
-
-//creamos el evento de escucha sobre el formulario:
+console.log(data);
+// //creamos el evento de escucha sobre el formulario:
 form.addEventListener('change', handleFillData);
 
-// function handleResetBtn() {
-//   data = {
-//     palette: '',
-//     name: '',
-//     job: '',
-//     phone: '',
-//     email: '',
-//     linkedin: '',
-//     github: '',
-//   };
-//   //   localStorage.clear();
-//   //   location.reload(); // recargar la pagina
-//   fillCard(data);
-// }
-// resetButton.addEventListener('click', handleResetBtn);
-getLocalStorage();
+// // function handleResetBtn() {
+// //   data = {
+// //     palette: '',
+// //     name: '',
+// //     job: '',
+// //     phone: '',
+// //     email: '',
+// //     linkedin: '',
+// //     github: '',
+// //   };
+// //   //   localStorage.clear();
+// //   //   location.reload(); // recargar la pagina
+// //   fillCard(data);
+// // }
+// // resetButton.addEventListener('click', handleResetBtn);
+// getLocalStorage();
