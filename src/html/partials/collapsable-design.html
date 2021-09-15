@@ -1,66 +1,42 @@
-<div>
-  <include
-    src="./collapsable-title.html"
-    iconStart="far fa-object-ungroup cloningicon"
-    title="Diseña"
-    iconEnd="fas fa-chevron-up"
-  >
-  </include>
-  <section class="wholecollapsable-design js_section" id="desing">
-    <!-- <div class="titledesignflex">
+<include src="./collapsable-title.html" iconStart="far fa-object-ungroup cloningicon" title="Diseña"
+  iconEnd="fas fa-chevron-up">
+</include>
+<section class="wholecollapsable-design js_section" id="desing">
+  <!-- <div class="titledesignflex">
     <i class="far fa-object-ungroup cloningicon"></i>
     <h3 class="titledesign">diseña</h3>
     <i class="fas fa-chevron-up arrowdesign"></i>
   </div> -->
 
-    <div class="rectangle-2"></div>
-    <fieldset class="flexboxdesign">
-      <h4 class="titlecolours">colores</h4>
-      <div class="colourboxesmaster">
-        <label class="label__design" for="colour1">
-          <input
-            id="1"
-            class="design__input"
-            type="radio"
-            value="colours1"
-            name="palette"
-          />
-          <ul class="colourboxes colourone">
-            <li class="item1-item1 li">Color A</li>
-            <li class="item1-item2 li">Color B</li>
-            <li class="item1-item3 li">Color C</li>
-          </ul>
-        </label>
-        <label class="label__design" for="colour2">
-          <input
-            id="2"
-            class="design__input"
-            type="radio"
-            value="colours2"
-            name="coloursgrid"
-          />
-          <ul class="colourboxes colourtwo">
-            <li class="item2-item1 li">Color A</li>
-            <li class="item2-item2 li">Color B</li>
-            <li class="item2-item3 li">Color C</li>
-          </ul>
-        </label>
+  <div class="rectangle-2"></div>
+  <fieldset class="flexboxdesign">
+    <h4 class="titlecolours">colores</h4>
+    <div class="colourboxesmaster js_designevent">
+      <label class="label__design" for="colour1">
+        <input id="1" class="design__input js_designcolourdefault" type="radio" value="1" name="palette" />
+        <ul class="colourboxes colourone">
+          <li class="item1-item1 li">Color A</li>
+          <li class="item1-item2 li">Color B</li>
+          <li class="item1-item3 li">Color C</li>
+        </ul>
+      </label>
+      <label class="label__design" for="colour2">
+        <input id="2" class="design__input js_designcolourred" type="radio" value="2" name="palette" />
+        <ul class="colourboxes colourtwo">
+          <li class="item2-item1 li">Color A</li>
+          <li class="item2-item2 li">Color B</li>
+          <li class="item2-item3 li">Color C</li>
+        </ul>
+      </label>
 
-        <label class="label__design" for="colour3">
-          <input
-            id="3"
-            class="design__input"
-            type="radio"
-            value="colours3"
-            name="coloursgrid"
-          />
-          <ul class="colourboxes colourthree">
-            <li class="item3-item2 li">Color B</li>
-            <li class="item3-item1 li">Color A</li>
-            <li class="item3-item3 li">Color C</li>
-          </ul>
-        </label>
-      </div>
-    </fieldset>
-  </section>
-</div>
+      <label class="label__design" for="colour3">
+        <input id="3" class="design__input js_designcolouryellow" type="radio" value="3" name="palette" />
+        <ul class="colourboxes colourthree">
+          <li class="item3-item2 li">Color B</li>
+          <li class="item3-item1 li">Color A</li>
+          <li class="item3-item3 li">Color C</li>
+        </ul>
+      </label>
+    </div>
+  </fieldset>
+</section>
