@@ -5,7 +5,6 @@ const fileField = document.querySelector('.js__profile-upload-btn');
 const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
-
 /**
  * Recoge el archivo añadido al campo de tipo "file"
  * y lo carga en nuestro objeto FileReader para que
@@ -14,12 +13,11 @@ const profilePreview = document.querySelector('.js__profile-preview');
  * al tener los datos listos
  * @param {evento} e**/
 
-function getImage(e){
+function getImage(e) {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
-
 
 /**
  * Una vez tenemos los datos listos en el FR podemos
@@ -34,7 +32,6 @@ function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
 }
-
 
 /**
  * Genera un click automático en nuesto campo de tipo "file"
@@ -52,24 +49,24 @@ const allTitle = document.querySelectorAll('.js_collapsable');
 const iconArrow = document.querySelectorAll('.js_iconEnd');
 const allSections = document.querySelectorAll('.js_section');
 
-function arrowReverse(){
-  for(const arrow of iconArrow){
+function arrowReverse() {
+  for (const arrow of iconArrow) {
     arrow.classList.toggle('arrowReverse');
   }
 }
 
-function closeOpenCollapsables(){
-  for(const eachSection of allSections){
+function closeOpenCollapsables() {
+  for (const eachSection of allSections) {
     eachSection.classList.toggle('hidden');
   }
 }
-function handleClickCollapsable(ev){
+function handleClickCollapsable(ev) {
   //const eventTarget = ev.target.id;
   arrowReverse();
   closeOpenCollapsables();
 }
 
-for(const eachTitle of allTitle) {
+for (const eachTitle of allTitle) {
   eachTitle.addEventListener('click', handleClickCollapsable);
 }
 
@@ -85,40 +82,44 @@ for(const eachTitle of allTitle) {
     //console.log(data.target);
   }
 }*/
-const fillName = document.querySelector ( '.js_fillSectionName');
-const previewName = document.querySelector ('.js_previewName');
+const fillName = document.querySelector('.js_fillSectionName');
+const previewName = document.querySelector('.js_previewName');
 
 fillName.addEventListener('keyup', (ev) => {
   let nameValue = ev.target.value;
   previewName.textContent = nameValue;
 });
 
-
-
 // JS DE LA PREVIEW PARTE DESIGN
 const coloursDesign = document.querySelectorAll('.js_design');
 const checkBoxRed = document.querySelector('.js_designcolourred');
 const checkBoxYellow = document.querySelector('.js_designcolouryellow');
+const checkBoxDefault = document.querySelector('.js_designcolourdefault');
 
-
-// for(const eachTitle of allTitle) {
-//   eachTitle.addEventListener('click', handleClickCollapsable);
-// }
-// function paintRed(){
-//   coloursDesign.classList.add('redpalette');
-//   console.log(coloursDesign);
-// }
-
-function paintRed(){
-  for(const eachSection of coloursDesign){
+function paintRed() {
+  for (const eachSection of coloursDesign) {
+    eachSection.classList.remove('defaultpalette');
+    eachSection.classList.remove('yellowpalette');
     eachSection.classList.add('redpalette');
+    // const exit = eachSection.classList.replace(eachSection.classList.value ,'redpalette');
+    // if(!exit) console.log('errroooooooor');
+  }
+  console.log(paintRed);
+}
+
+function paintYellow() {
+  for (const eachSection of coloursDesign) {
+    eachSection.classList.remove('defaultpalette');
+    eachSection.classList.remove('redpalette');
+    eachSection.classList.add('yellowpalette');
   }
 }
 
-function paintYellow(){
-  for(const eachSection of coloursDesign){
+function paintDefault() {
+  for (const eachSection of coloursDesign) {
+    eachSection.classList.remove('yellowpalette');
     eachSection.classList.remove('redpalette');
-    eachSection.classList.add('yellowpalette');
+    eachSection.classList.add('defaultpalette');
   }
 }
 
@@ -126,10 +127,4 @@ checkBoxRed.addEventListener('click', paintRed);
 console.log(checkBoxRed);
 checkBoxYellow.addEventListener('click', paintYellow);
 console.log(checkBoxYellow);
-
-// .addEventListener('click', (ev) => {
-//   let nameValue = ev.target.value;
-//   previewName.textContent = nameValue;
-// });
-
-
+checkBoxDefault.addEventListener('click', paintDefault);
