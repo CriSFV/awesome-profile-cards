@@ -1,8 +1,9 @@
+'use strict';
 const createButton = document.querySelector('.js_shareButton');
 const urlCard = document.querySelector('.js_urlCard');
 const notCreated = document.querySelector('.js_notCreate');
 const twitterBtn = document.querySelector('.js_twiterBtn');
-let pepinoLink;
+let responseLink;
 function createCard() {
   fetch('https://awesome-profile-cards.herokuapp.com/card', {
     method: 'POST',
@@ -12,22 +13,23 @@ function createCard() {
     },
   })
     .then((response) => response.json())
-    .then((pepino) => {
-      console.log(pepino);
-      pepinoLink = pepino.cardURL;
-      if (pepino.success === true) {
+    .then((response) => {
+      responseLink = response.cardURL;
+      if (response.success === true) {
         notCreated.classList.remove('hidden');
-        urlCard.innerHTML = `<a href="${pepino.cardURL}">Pincha aquí, ${data.name} <i class="far fa-smile-wink"></i> </a>`;
+        notCreated.innerHTML = 'Tu tarjeta ha sido creada';
+        urlCard.innerHTML = `<a href="${response.cardURL}">Pincha aquí, ${data.name} <i class="far fa-smile-wink"></i> </a>`;
         twitterBtn.classList.remove('hidden');
-        twitterBtn.innerHTML = `<a class= "twitter__link js_twitterLink" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=${pepinoLink}" target="_blank"><i class="fab fa-twitter"></i> Compartir en Twiter</a>`;
+        twitterBtn.innerHTML = `<a class= "twitter__link js_twitterLink" href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=${responseLink}" target="_blank"><i class="fab fa-twitter"></i> Compartir en Twiter</a>`;
       } else {
+        notCreated.classList.remove('hidden');
         notCreated.innerHTML = 'No hemos podido crear la tarjeta';
         urlCard.innerHTML = `<i class="far fa-sad-tear"></i> Introduzca todos los campos obligatorios`;
       }
     });
 }
 function handleTwitter() {
-  twitterBtn.href = `"https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=${pepinoLink}"`;
+  twitterBtn.href = `"https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=${responseLink}"`;
 }
 twitterBtn.addEventListener('click', handleTwitter);
 
