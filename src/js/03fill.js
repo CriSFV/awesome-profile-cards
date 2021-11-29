@@ -41,7 +41,10 @@ function fillCard(data) {
     previewDescription.innerHTML = data.job;
     previewPhone.href = 'phone:' + data.phone;
     previewEmail.setAttribute('href', 'mailto:' + data.email);
-    previewLinkedin.setAttribute('href', data.linkedin);
+    previewLinkedin.setAttribute(
+      'href',
+      'https://www.linkedin.com/in/' + data.linkedin + '/'
+    );
     previewGithub.setAttribute('href', 'https://github.com/' + data.github);
   } else {
     previewName.innerHTML = 'Nombre Apellidos';
@@ -87,7 +90,7 @@ function handleFillData(ev) {
   setInLocalStorage();
   fillCard(data);
 }
-console.log(data);
+
 // //creamos el evento de escucha sobre el formulario:
 form.addEventListener('change', handleFillData);
 
@@ -104,7 +107,7 @@ function handleResetBtn() {
     github: '',
     photo: '',
   };
-  console.log(data);
+
   localStorage.clear();
   location.reload(); // recargar la pagina
   fillCard(data);
